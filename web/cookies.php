@@ -20,7 +20,7 @@ else {
 
 $visits = $_SESSION["counter"];
 
-echo "<br>"
+echo "<br>";
 
 if(isset($_SESSION["cart"])) {
    foreach($_SESSION["cart"] as $productId) {
