@@ -24,7 +24,7 @@ echo "<br>"
 
 if(isset($_SESSION["cart"])) {
    foreach($_SESSION["cart"] as $productId) {
-      echo "$productId <br>;"
+      echo "$productId <br>";
    }
 }
 
