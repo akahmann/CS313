@@ -1,7 +1,7 @@
 <?php
 
-setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
-
+//setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +12,16 @@ setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
 <body>
 
 Where's the cookie???
+
+<?php
+
+$_SESSION["counter"] = 0;
+
+if(isset($_SESSION["counter"])) {
+   echo "\nIt is set";
+}
+
+?>
 
 </body>
 </html>
