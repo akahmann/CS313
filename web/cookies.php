@@ -3,15 +3,6 @@
 //setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
 session_start();
 
-/**
- *
- */
-class Squirrel {
-   public $amount;
-   public $item;
-   public $price;
-}
-
 $cartArray = array(
    123,
    12,
