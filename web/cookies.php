@@ -11,6 +11,8 @@ $cartArray = array(
 
 $_SESSION['cart'] = $cartArray;
 
+var_dump($_SESSION["cart"]);
+
 if(isset($_SESSION["counter"])) {
    $_SESSION["counter"]++;
 }
@@ -34,6 +36,15 @@ if(isset($_SESSION["cart"])) {
 <html>
 <head>
    <title></title>
+
+   <script>
+
+   function loadCart(item) {
+      reload();
+   }
+
+   </script>
+
 </head>
 <body>
 
@@ -50,6 +61,11 @@ Where's the cookie???
 echo "You have been here $visits times";
 
 ?>
+
+<button onclick="loadCart(1)">Item 1</button> <br>
+<button onclick="loadCart(2)">Item 2</button> <br>
+<button onclick="loadCart(3)">Item 3</button> <br>
+
 
 </body>
 </html>
