@@ -40,7 +40,7 @@ if(isset($_SESSION["cart"])) {
    <script>
 
    function loadCart(item) {
-      reload();
+      cookies.php.reload();
    }
 
    </script>
