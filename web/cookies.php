@@ -3,6 +3,23 @@
 //setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
 session_start();
 
+/**
+ *
+ */
+class Squirrel {
+   public $amount;
+   public $item;
+   public $price;
+}
+
+$cartArray = array(
+   123,
+   12,
+   490
+);
+
+$_SESSION['cart'] = $cartArray;
+
 if(isset($_SESSION["counter"])) {
    $_SESSION["counter"]++;
 }
@@ -11,6 +28,14 @@ else {
 }
 
 $visits = $_SESSION["counter"];
+
+echo "<br>"
+
+if(isset($_SESSION["cart"])) {
+   foreach($_SESSION["cart"] as $productId) {
+      echo "$productId <br>;"
+   }
+}
 
 ?>
 
