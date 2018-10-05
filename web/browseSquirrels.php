@@ -4,7 +4,7 @@
 session_start();
 
 $squirrels = array();
-if(!isset($_SESSION["squirrels"])) {
+if(!isset($_SESSION["squirrels"]))
    $_SESSION["squirrels"] = [
       "000" => 0,
       "001" => 0,
@@ -13,12 +13,6 @@ if(!isset($_SESSION["squirrels"])) {
       "004" => 0,
       "005" => 0
    ]
-}
-$cartArray = array(
-   123,
-   12,
-   490
-);
 
 //$_SESSION['cart'] = $cartArray;
 
