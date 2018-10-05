@@ -1,3 +1,26 @@
+<?php
+
+//setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
+session_start();
+
+$cartArray = array(
+   123,
+   12,
+   490
+);
+
+$_SESSION['cart'] = $cartArray;
+
+var_dump($_SESSION["cart"]);
+
+if(isset($_SESSION["cart"])) {
+   foreach($_SESSION["cart"] as $productId) {
+      echo "$productId <br>";
+   }
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +29,12 @@
 <body>
 
 <h1>Squirreltopia</h1>
+
+<form action="viewSquirrelsCart.php">
+   <button onclick="loadCart(1)">Item 1</button> <br>
+   <button onclick="loadCart(2)">Item 2</button> <br>
+   <button onclick="location.reload()">Item 3</button> <br>
+</form>
 
 <img src="normalSquirrel.jpg" alt="Normal Squirrel"> <br>
 <img src="happySquirrel.jpg" alt="Happy Squirrel"> <br>
