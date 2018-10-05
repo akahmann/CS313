@@ -40,7 +40,7 @@ if(isset($_SESSION["cart"])) {
    <script>
 
    function loadCart(item) {
-      cookies.php.reload();
+      location.reload();
    }
 
    </script>
@@ -64,7 +64,7 @@ echo "You have been here $visits times";
 
 <button onclick="loadCart(1)">Item 1</button> <br>
 <button onclick="loadCart(2)">Item 2</button> <br>
-<button onclick="cookies.php.reload()">Item 3</button> <br>
+<button onclick="location.reload()">Item 3</button> <br>
 
 
 </body>
