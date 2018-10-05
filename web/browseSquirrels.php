@@ -42,6 +42,11 @@ if(!isset($_SESSION["squirrels"]))
    <input type="hidden" name="item" value="000">
 </form>
 <br>
+<form action="addSquirrels.php" method="post">
+   <input type="button" value="Buy Fat Squirrel">
+   <input type="hidden" name="item" value="001">
+</form>
+<br>
 
 <img src="normalSquirrel.jpg" alt="Normal Squirrel"> <br>
 <img src="happySquirrel.jpg" alt="Happy Squirrel"> <br>
