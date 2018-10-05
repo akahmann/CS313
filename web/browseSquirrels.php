@@ -3,21 +3,34 @@
 //setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
 session_start();
 
+$squirrels = array();
+if(!isset($_SESSION["squirrels"])) {
+   $_SESSION["squirrels"] = [
+      "000" => 0,
+      "001" => 0,
+      "002" => 0,
+      "003" => 0,
+      "004" => 0,
+      "005" => 0
+   ]
+}
 $cartArray = array(
    123,
    12,
    490
 );
 
-$_SESSION['cart'] = $cartArray;
+//$_SESSION['cart'] = $cartArray;
 
-var_dump($_SESSION["cart"]);
+//var_dump($_SESSION["cart"]);
 
-if(isset($_SESSION["cart"])) {
-   foreach($_SESSION["cart"] as $productId) {
-      echo "$productId <br>";
-   }
-}
+// echo "<br>";
+
+// if(isset($_SESSION["cart"])) {
+//    foreach($_SESSION["cart"] as $productId) {
+//       echo "$productId <br>";
+//    }
+// }
 
 ?>
 
@@ -30,11 +43,11 @@ if(isset($_SESSION["cart"])) {
 
 <h1>Squirreltopia</h1>
 
-<form action="viewSquirrelsCart.php">
-   <button onclick="loadCart(1)">Item 1</button> <br>
-   <button onclick="loadCart(2)">Item 2</button> <br>
-   <button onclick="location.reload()">Item 3</button> <br>
+<form action="addSquirrels.php" method="post">
+   <input type="submit" value="Buy Normal Squirrel">
+   <input type="hidden" name="item" value="000">
 </form>
+<br>
 
 <img src="normalSquirrel.jpg" alt="Normal Squirrel"> <br>
 <img src="happySquirrel.jpg" alt="Happy Squirrel"> <br>
