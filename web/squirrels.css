@@ -1,3 +1,7 @@
+body {
+   background="squirrelBackground.jpg";
+}
+
 .flex {
     display: flex;
     justify-content: space-around;

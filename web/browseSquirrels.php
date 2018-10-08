@@ -120,6 +120,7 @@ if(!isset($_SESSION["squirrels"]))
    <img src="invisibleSquirrel.jpg" alt="Invisible Squirrel" class="triplePic">
 </div>
 <br>
+<div class="flex">
    <form action="addSquirrels.php" method="post">
       <input type="submit" value="Add Hyena Squirrel">
       <input type="hidden" name="item" value="009">
@@ -132,6 +133,7 @@ if(!isset($_SESSION["squirrels"]))
       <input type="submit" value="Add Invisible Squirrel">
       <input type="hidden" name="item" value="011">
    </form>
+</div>
 
 </body>
 </html>
