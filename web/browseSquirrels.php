@@ -9,6 +9,9 @@ session_start();
 // include 'addSquirrels.php';
 // echo $item;
 
+include 'confirmSquirrels.php';
+echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+
 $squirrels = array();
 if(!isset($_SESSION["squirrels"]))
    $_SESSION["squirrels"] = [

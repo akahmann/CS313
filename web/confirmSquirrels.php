@@ -1,5 +1,7 @@
 <?php
    session_start();
+
+   $cars = array("Volvo", "BMW", "Toyota");
 ?>
 
 <!DOCTYPE html>
