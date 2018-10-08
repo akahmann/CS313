@@ -31,7 +31,10 @@ if(!isset($_SESSION["squirrels"]))
 <!DOCTYPE html>
 <html>
 <head>
-   <title></title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="squirrels.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Squirreltopia - Browse Squirrels</title>
 </head>
 <body>
 
@@ -48,18 +51,26 @@ if(!isset($_SESSION["squirrels"]))
 </form>
 <br>
 
-<img src="normalSquirrel.jpg" alt="squirrels/Normal Squirrel"> <br>
-<img src="happySquirrel.jpg" alt="Happy Squirrel"> <br>
-<img src="heroicSquirrel.jpg" alt="Heroic Squirrel"> <br>
-<img src="evilSquirrel.jpg" alt="Evil Squirrel"> <br>
-<img src="fatSquirrel.jpg" alt="Fat Squirrel"> <br>
-<img src="knightSquirrel.jpg" alt="Knight Squirrel"> <br>
-<img src="supermanSquirrel.jpg" alt="Superman Squirrel"> <br>
-<img src="thorSquirrel.jpg" alt="Thor Squirrel"> <br>
-<img src="giantSquirrel.jpg" alt="Giant Squirrel"> <br>
-<img src="hyenaSquirrel.jpg" alt="Hyena Squirrel"> <br>
-<img src="buffSquirrel.jpg" alt="Buff Squirrel"> <br>
-<img src="invisibleSquirrel.jpg" alt="Invisible Squirrel"> <br>
+<div class="flex">
+   <img src="normalSquirrel.jpg" alt="Normal Squirrel"> <br>
+   <img src="happySquirrel.jpg" alt="Happy Squirrel"> <br>
+   <img src="heroicSquirrel.jpg" alt="Heroic Squirrel"> <br>
+</div>
+<div class="flex">
+   <img src="evilSquirrel.jpg" alt="Evil Squirrel"> <br>
+   <img src="fatSquirrel.jpg" alt="Fat Squirrel"> <br>
+   <img src="knightSquirrel.jpg" alt="Knight Squirrel"> <br>
+</div>
+<div class="flex">
+   <img src="supermanSquirrel.jpg" alt="Superman Squirrel"> <br>
+   <img src="thorSquirrel.jpg" alt="Thor Squirrel"> <br>
+   <img src="giantSquirrel.jpg" alt="Giant Squirrel"> <br>
+</div>
+<div class="flex">
+   <img src="hyenaSquirrel.jpg" alt="Hyena Squirrel"> <br>
+   <img src="buffSquirrel.jpg" alt="Buff Squirrel"> <br>
+   <img src="invisibleSquirrel.jpg" alt="Invisible Squirrel"> <br>
+</div>
 
 </body>
 </html>
