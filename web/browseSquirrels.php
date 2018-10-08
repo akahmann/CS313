@@ -156,7 +156,7 @@ if(!isset($_SESSION["squirrels"]))
 <br>
 <div class="flex">
    <p><b>Hyena Squirrel:</b> This squirrel has a really great sense of humor.</p>
-   <p><b>Buff Squirrel:</b> This squirrel is actually a personal fitness trainer in its spare time.</p>
+   <p><b>Buff Squirrel:</b> This squirrel's power level is over nine thousand.</p>
    <p><b>Invisible Squirrel:</b> I bet you didn't see this coming!</p>
 </div>
 <br>
