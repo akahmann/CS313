@@ -4,7 +4,7 @@
 session_start();
 
 //?key=ProductName&value=ValueAmount
-include "addSquirrels.php";
+//include "addSquirrels.php";
 //%20 = space
 
 $squirrels = array();
