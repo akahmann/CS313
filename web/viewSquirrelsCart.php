@@ -29,7 +29,7 @@
 
 
    <?php
-   echo "<h1> BLAHHH!!!! </h1>"
+   //echo "<h1> BLAHHH!!!! </h1>"
       foreach($squirrels as $key => $value) {
          echo "SQUIRRELS!!<br>";
          if ($key == 000) {
