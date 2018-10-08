@@ -6,7 +6,7 @@ session_start();
 //?key=ProductName&value=ValueAmount
 //%20 = space
 
-// include 'addSquirrels.php';
+ include 'addSquirrels.php';
 // echo $item;
 
 include 'confirmSquirrels.php';
