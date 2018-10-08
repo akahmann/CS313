@@ -63,15 +63,15 @@ if(!isset($_SESSION["squirrels"]))
 <br>
 <div class="flex">
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Normal Squirrel">
+      <input type="submit" class="btn" value= "Add to Cart">
       <input type="hidden" name="item" value="000">
    </form>
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Happy Squirrel">
+      <input type="submit" class="btn" value= "Add to Cart">
       <input type="hidden" name="item" value="001">
    </form>
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Heroic Squirrel">
+      <input type="submit" class="btn" value= "Add to Cart">
       <input type="hidden" name="item" value="002">
    </form>
 </div>
@@ -91,15 +91,15 @@ if(!isset($_SESSION["squirrels"]))
 <br>
 <div class="flex">
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Evil Squirrel">
+      <input type="submit" class="btn" value= "Add to Cart">
       <input type="hidden" name="item" value="003">
    </form>
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Fat Squirrel">
+      <input type="submit" class="btn" value= "Add to Cart">
       <input type="hidden" name="item" value="004">
    </form>
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Knight Squirrel">
+      <input type="submit" class="btn" value= "Add to Cart">
       <input type="hidden" name="item" value="005">
    </form>
 </div>
@@ -119,15 +119,15 @@ if(!isset($_SESSION["squirrels"]))
 <br>
 <div class="flex">
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Superman Squirrel">
+      <input type="submit" class="btn" value= "Add to Cartrel">
       <input type="hidden" name="item" value="006">
    </form>
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Thor Squirrel">
+      <input type="submit" class="btn" value= "Add to Cart>
       <input type="hidden" name="item" value="007">
    </form>
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Giant Squirrel">
+      <input type="submit" class="btn" value= "Add to Cart">
       <input type="hidden" name="item" value="008">
    </form>
 </div>
@@ -147,15 +147,15 @@ if(!isset($_SESSION["squirrels"]))
 <br>
 <div class="flex">
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Hyena Squirrel">
+      <input type="submit" class="btn" value= "Add to Cart">
       <input type="hidden" name="item" value="009">
    </form>
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Buff Squirrel">
+      <input type="submit" class="btn" value= "Add to Cart>
       <input type="hidden" name="item" value="010">
    </form>
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value="Add Invisible Squirrel">
+      <input type="submit" class="btn" value= "Add to Cartr">
       <input type="hidden" name="item" value="011">
    </form>
 </div>
