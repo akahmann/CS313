@@ -113,7 +113,7 @@ if(!isset($_SESSION["squirrels"]))
 <br>
 <div class="flex">
    <p><b>Superman Squirrel:</b> The is the most over powered and boring squirrel we have to offer!</p>
-   <p><b>Thor Squirrel:</b> BRING ME THANOS!!!!!!</p>
+   <p><b>Thor Squirrel:</b> This squirrel's favorite thing to say is, "BRING ME THANOS!!!"</p>
    <p><b>Giant Squirrel:</b> If you ever wanted to reenact Godzilla, but with a Squirrel instead, we got the Squirrel for you!</p>
 </div>
 <br>
