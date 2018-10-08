@@ -3,6 +3,10 @@
 //setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
 session_start();
 
+//?key=ProductName&value=ValueAmount
+inclued "addSquirrels.php";
+//%20 = space
+
 $squirrels = array();
 if(!isset($_SESSION["squirrels"]))
    $_SESSION["squirrels"] = [
