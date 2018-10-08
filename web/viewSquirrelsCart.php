@@ -30,62 +30,62 @@
 
    <?php
       foreach($squirrels as $key => $value) {
-         if (key == 000) {
-            if (value > 0) {
+         if ($key == 000) {
+            if ($value > 0) {
                echo "Normal Squirrel: $value <br>";
             }
          }
-         if (key == 001) {
-            if (value > 0) {
+         if ($key == 001) {
+            if ($value > 0) {
                echo "Happy Squirrel: $value <br>";
             }
          }
-         if (key == 002) {
-            if (value > 0) {
+         if ($key == 002) {
+            if ($value > 0) {
                echo "Heroic Squirrel: $value <br>";
             }
          }
-         if (key == 003) {
-            if (value > 0) {
+         if ($key == 003) {
+            if ($value > 0) {
                echo "Evil Squirrel: $value <br>";
             }
          }
-         if (key == 004) {
-            if (value > 0) {
+         if ($key == 004) {
+            if ($value > 0) {
                echo "Fat Squirrel: $value <br>";
             }
          }
-         if (key == 005) {
-            if (value > 0) {
+         if ($key == 005) {
+            if ($value > 0) {
                echo "Knight Squirrel: $value <br>";
             }
          }
-         if (key == 006) {
-            if (value > 0) {
+         if ($key == 006) {
+            if ($value > 0) {
                echo "Superman Squirrel: $value <br>";
             }
          }
-         if (key == 007) {
-            if (value > 0) {
+         if ($key == 007) {
+            if ($value > 0) {
                echo "Thor Squirrel: $value <br>";
             }
          }
-         if (key == 008) {
-            if (value > 0) {
+         if ($key == 008) {
+            if ($value > 0) {
                echo "Giant Squirrel: $value <br>";
             }
          }
-         if (key == 009) {
-            if (value > 0) {
+         if ($key == 009) {
+            if ($value > 0) {
                echo "Hyena Squirrel: $value <br>";
             }
          }
-         if (key == 010) {
-            if (value > 0) {
+         if ($key == 010) {
+            if ($value > 0) {
                echo "Buff Squirrel: $value <br>";
             }
-         }if (key == 011) {
-            if (value > 0) {
+         }if ($key == 011) {
+            if (v$alue > 0) {
                echo "Invisible Squirrel: $value <br>";
             }
          }
