@@ -30,7 +30,8 @@
 
    <?php
    //echo "<h1> BLAHHH!!!! </h1>"
-      foreach($squirrels as $key => $value) {
+      foreach($squirrels as $key => $value)
+      {
          echo "SQUIRRELS!!<br>";
          if ($key == 000) {
             if ($value > 0) {
