@@ -1,9 +1,8 @@
 <?php
+session_start();
 
-// session_start();
+$item = $_POST["item"];
 
-// $item = $_POST["item"];
-
-// $_SESSION["squirrels"][$item]++;
-// header("location: browseSquirrels.php");
+$_SESSION["squirrels"][$item]++;
+header("location: browseSquirrels.php");
 ?>

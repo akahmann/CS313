@@ -26,7 +26,7 @@ if(!isset($_SESSION["squirrels"]))
       "011" => 0
    ]
 
-echo $squirrels[000];
+//echo $squirrels[000];
 
 //$_SESSION['cart'] = $cartArray;
 
