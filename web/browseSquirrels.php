@@ -60,6 +60,7 @@ if(!isset($_SESSION["squirrels"]))
       <input type="hidden" name="item" value="000">
    </form> -->
    <h1>Squirreltopia</h1>
+   <a href="viewSquirrelsCart.php">View Cart</a>
 </header>
 
 <br>
