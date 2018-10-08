@@ -30,12 +30,14 @@
 
    <?php
    //echo "<h1> BLAHHH!!!! </h1>"
+   if(isset($_SESSION["squirrels"]))
+      echo "It works <br>";
       foreach($squirrels as $key => $value)
       {
          echo "SQUIRRELS!!<br>";
          if ($key == 000) {
             if ($value > 0) {
-               echo "Normal Squirrel: $value <br>";
+               echo "<p style = 'background-color:white;'>Normal Squirrel: $value <br></p>";
             }
          }
          if ($key == 001) {
