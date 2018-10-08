@@ -43,8 +43,9 @@ if(!isset($_SESSION["squirrels"]))
    <title>Squirreltopia - Browse Squirrels</title>
 </head>
 <body>
-
-<h1>Squirreltopia</h1>
+<header>
+   <h1>Squirreltopia</h1>
+</header>
 
 <br>
 
