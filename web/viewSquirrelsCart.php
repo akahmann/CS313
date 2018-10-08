@@ -84,8 +84,9 @@
             if ($value > 0) {
                echo "Buff Squirrel: $value <br>";
             }
-         }if ($key == 011) {
-            if (v$alue > 0) {
+         }
+         if ($key == 011) {
+            if ($value > 0) {
                echo "Invisible Squirrel: $value <br>";
             }
          }
