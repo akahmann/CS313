@@ -56,16 +56,19 @@ if(!isset($_SESSION["squirrels"]))
    <img src="happySquirrel.jpg" alt="Happy Squirrel" class="triplePic"> <br>
    <img src="heroicSquirrel.jpg" alt="Heroic Squirrel" class="triplePic"> <br>
 </div>
+<br> <br>
 <div class="flex">
    <img src="evilSquirrel.jpg" alt="Evil Squirrel" class="triplePic"> <br>
    <img src="fatSquirrel.jpg" alt="Fat Squirrel" class="triplePic"> <br>
    <img src="knightSquirrel.jpg" alt="Knight Squirrel" class="triplePic"> <br>
 </div>
+<br> <br>
 <div class="flex">
    <img src="supermanSquirrel.jpg" alt="Superman Squirrel" class="triplePic"> <br>
    <img src="thorSquirrel.jpg" alt="Thor Squirrel" class="triplePic"> <br>
    <img src="giantSquirrel.jpg" alt="Giant Squirrel" class="triplePic"> <br>
 </div>
+<br> <br>
 <div class="flex">
    <img src="hyenaSquirrel.jpg" alt="Hyena Squirrel" class="triplePic"> <br>
    <img src="buffSquirrel.jpg" alt="Buff Squirrel" class="triplePic"> <br>
