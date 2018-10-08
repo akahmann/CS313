@@ -6,4 +6,6 @@ $item = $_POST["item"];
 
 $_SESSION["squirrels"][$item]++;
 header("location: browseSquirrels.php");
+
+echo "# $item";
 ?>

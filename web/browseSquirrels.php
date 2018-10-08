@@ -50,7 +50,7 @@ if(!isset($_SESSION["squirrels"]))
 
 <?php
 
-echo "Squirrel # $item";
+echo "Squirrel # $item <br>";
 
 ?>
 
