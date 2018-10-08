@@ -32,7 +32,7 @@
    //echo "<h1> BLAHHH!!!! </h1>"
    if(isset($_SESSION["squirrels"]))
       echo "It works <br>";
-      foreach($squirrels as $key => $value)
+      foreach($_SESSION["squirrels"] as $key => $value)
       {
          echo "SQUIRRELS!!<br>";
          if ($key == '000') {
@@ -84,7 +84,7 @@
          //    if ($value > 0) {
          //       echo "Hyena Squirrel: $value <br>";
          //    }
-         // }
+         // }==
          // if ($key == 010) {
          //    if ($value > 0) {
          //       echo "Buff Squirrel: $value <br>";
