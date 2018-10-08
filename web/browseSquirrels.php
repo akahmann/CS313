@@ -6,11 +6,11 @@ session_start();
 //?key=ProductName&value=ValueAmount
 //%20 = space
 
- include 'addSquirrels.php';
+// include 'addSquirrels.php';
 // echo $item;
 
-include 'confirmSquirrels.php';
-echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+// include 'confirmSquirrels.php';
+// echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
 
 $squirrels = array();
 if(!isset($_SESSION["squirrels"]))
