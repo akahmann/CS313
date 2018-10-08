@@ -28,7 +28,8 @@ body {
    border-radius: 12px;
    padding: 5px;
    text-align: center;
-   font-family: chalkduster;
+   font-family: Chalkduster, fantasy;
+   font-size: 18px;
    margin: 4px 2px;
    cursor: pointer;
 }
