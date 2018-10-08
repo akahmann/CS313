@@ -55,6 +55,10 @@ if(!isset($_SESSION["squirrels"]))
 </head>
 <body>
 <header>
+   <form action="confirmSquirrels.php" method="post">
+      <input type="submit" class="btn" value= "Add to Cart">
+      <input type="hidden" name="item" value="000">
+   </form>
    <h1>Squirreltopia</h1>
 </header>
 
