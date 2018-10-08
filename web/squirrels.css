@@ -20,7 +20,7 @@ body {
     align-self: center;
 }
 
-button {
+.btn {
    background-color: rgb(229, 209, 153);
    border: none;
    color: rgb(22, 19, 8);
@@ -32,7 +32,7 @@ button {
    cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
    background-color: rgb(22, 19, 8);
    color: rgb(229, 209, 153);
 }
