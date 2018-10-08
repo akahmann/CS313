@@ -1,5 +1,5 @@
 body {
-   background="squirrelBackground.jpg";
+   background-image=url("squirrelBackground.jpg");
 }
 
 .flex {
