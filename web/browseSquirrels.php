@@ -48,6 +48,12 @@ if(!isset($_SESSION["squirrels"]))
 </form>
 <br>
 
+<?php
+
+echo "Squirrel # $item";
+
+?>
+
 <img src="normalSquirrel.jpg" alt="Normal Squirrel"> <br>
 <img src="happySquirrel.jpg" alt="Happy Squirrel"> <br>
 <img src="heroicSquirrel.jpg" alt="Heroic Squirrel"> <br>
