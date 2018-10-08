@@ -151,7 +151,7 @@ if(!isset($_SESSION["squirrels"]))
       <input type="hidden" name="item" value="009">
    </form>
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value= "Add to Cart>
+      <input type="submit" class="btn" value= "Add to Cart">
       <input type="hidden" name="item" value="010">
    </form>
    <form action="addSquirrels.php" method="post">
