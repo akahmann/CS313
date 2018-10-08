@@ -119,11 +119,11 @@ if(!isset($_SESSION["squirrels"]))
 <br>
 <div class="flex">
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value= "Add to Cartrel">
+      <input type="submit" class="btn" value= "Add to Cartr">
       <input type="hidden" name="item" value="006">
    </form>
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value= "Add to Cart>
+      <input type="submit" class="btn" value= "Add to Cart">
       <input type="hidden" name="item" value="007">
    </form>
    <form action="addSquirrels.php" method="post">
@@ -155,7 +155,7 @@ if(!isset($_SESSION["squirrels"]))
       <input type="hidden" name="item" value="010">
    </form>
    <form action="addSquirrels.php" method="post">
-      <input type="submit" class="btn" value= "Add to Cartr">
+      <input type="submit" class="btn" value= "Add to Cart">
       <input type="hidden" name="item" value="011">
    </form>
 </div>
