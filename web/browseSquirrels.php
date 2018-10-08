@@ -6,8 +6,8 @@ session_start();
 //?key=ProductName&value=ValueAmount
 //%20 = space
 
-include 'addSquirrels.php';
-echo $item;
+// include 'addSquirrels.php';
+// echo $item;
 
 $squirrels = array();
 if(!isset($_SESSION["squirrels"]))
