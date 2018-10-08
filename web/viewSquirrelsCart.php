@@ -70,26 +70,26 @@
                echo "Thor Squirrel: $value <br>";
             }
          }
-         if ($key == 008) {
-            if ($value > 0) {
-               echo "Giant Squirrel: $value <br>";
-            }
-         }
-         if ($key == 009) {
-            if ($value > 0) {
-               echo "Hyena Squirrel: $value <br>";
-            }
-         }
-         if ($key == 010) {
-            if ($value > 0) {
-               echo "Buff Squirrel: $value <br>";
-            }
-         }
-         if ($key == 011) {
-            if ($value > 0) {
-               echo "Invisible Squirrel: $value <br>";
-            }
-         }
+         // if ($key == 008) {
+         //    if ($value > 0) {
+         //       echo "Giant Squirrel: $value <br>";
+         //    }
+         // }
+         // if ($key == 009) {
+         //    if ($value > 0) {
+         //       echo "Hyena Squirrel: $value <br>";
+         //    }
+         // }
+         // if ($key == 010) {
+         //    if ($value > 0) {
+         //       echo "Buff Squirrel: $value <br>";
+         //    }
+         // }
+         // if ($key == 011) {
+         //    if ($value > 0) {
+         //       echo "Invisible Squirrel: $value <br>";
+         //    }
+         // }
       }
    ?>
 </body>
