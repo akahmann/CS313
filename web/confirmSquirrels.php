@@ -116,11 +116,11 @@
    ?>
 
    <div class="myForm">
-      <b>First Name:</b> <?php echo $_POST["fName"]; ?>
+      <b>First Name:</b> <?php echo htmlspecialchars($_POST["fName"]); ?>
       <br>
-      <b>Last Name:</b> <?php echo $_POST["lName"]; ?>
+      <b>Last Name:</b> <?php echo htmlspecialchars($_POST["lName"]); ?>
       <br>
-      <b>Address:</b> <?php echo $_POST["address"]; ?>
+      <b>Address:</b> <?php echo htmlspecialchars($_POST["address"]); ?>
       <br>
    </div>
 
