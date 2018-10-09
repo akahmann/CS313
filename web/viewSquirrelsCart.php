@@ -39,8 +39,8 @@
       {
          if ($key == '000') {
             if ($value > 0) {
-               echo "<p class='purchase'>Normal Squirrel(s): $value <br></p>";
-               echo "<div class='group'<form action='addSquirrelsBtn.php' method='post'>
+               echo "<div class='group'><p class='purchase'>Normal Squirrel(s): $value <br></p>";
+               echo "<form action='addSquirrelsBtn.php' method='post'>
                         <input type='submit' class='addBtn' value= '+'>
                         <input type='hidden' name='item' value='000'>
                      </form>";
