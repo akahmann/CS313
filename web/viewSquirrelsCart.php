@@ -84,7 +84,7 @@
             if ($value > 0) {
                echo "<p style = 'background-color:white;'>Hyena Squirrel: $value <br></p>";
             }
-         }==
+         }
          if ($key == '010') {
             if ($value > 0) {
                echo "<p style = 'background-color:white;'>Buff Squirrel: $value <br></p>";
