@@ -75,22 +75,22 @@
                echo "<p style = 'background-color:white;'>Thor Squirrel: $value <br></p>";
             }
          }
-         if ($key == 008) {
+         if ($key == '008') {
             if ($value > 0) {
                echo "<p style = 'background-color:white;'>Giant Squirrel: $value <br></p>";
             }
          }
-         if ($key == 009) {
+         if ($key == '009') {
             if ($value > 0) {
                echo "<p style = 'background-color:white;'>Hyena Squirrel: $value <br></p>";
             }
          }==
-         if ($key == 010) {
+         if ($key == '010') {
             if ($value > 0) {
                echo "<p style = 'background-color:white;'>Buff Squirrel: $value <br></p>";
             }
          }
-         if ($key == 011) {
+         if ($key == '011') {
             if ($value > 0) {
                echo "<p style = 'background-color:white;'>Invisible Squirrel: $value <br></p>";
             }
