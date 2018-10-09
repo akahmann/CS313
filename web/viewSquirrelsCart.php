@@ -62,7 +62,6 @@
                         <input type='hidden' name='item' value='001'>
                      </form></div>";
             }
-            }
          }
          if ($key == '002') {
             if ($value > 0) {
@@ -75,7 +74,6 @@
                         <input type='submit' class='deleteBtn' value= '-'>
                         <input type='hidden' name='item' value='002'>
                      </form></div>";
-            }
             }
          }
          if ($key == '003') {
@@ -90,7 +88,6 @@
                         <input type='hidden' name='item' value='003'>
                      </form></div>";
             }
-            }
          }
          if ($key == '004') {
             if ($value > 0) {
@@ -103,7 +100,6 @@
                         <input type='submit' class='deleteBtn' value= '-'>
                         <input type='hidden' name='item' value='004'>
                      </form></div>";
-            }
             }
          }
          if ($key == '005') {
@@ -118,7 +114,6 @@
                         <input type='hidden' name='item' value='005'>
                      </form></div>";
             }
-            }
          }
          if ($key == '006') {
             if ($value > 0) {
@@ -131,7 +126,6 @@
                         <input type='submit' class='deleteBtn' value= '-'>
                         <input type='hidden' name='item' value='006'>
                      </form></div>";
-            }
             }
          }
          if ($key == '007') {
@@ -146,7 +140,6 @@
                         <input type='hidden' name='item' value='007'>
                      </form></div>";
             }
-            }
          }
          if ($key == '008') {
             if ($value > 0) {
@@ -159,7 +152,6 @@
                         <input type='submit' class='deleteBtn' value= '-'>
                         <input type='hidden' name='item' value='008'>
                      </form></div>";
-            }
             }
          }
          if ($key == '009') {
@@ -174,7 +166,6 @@
                         <input type='hidden' name='item' value='009'>
                      </form></div>";
             }
-            }
          }
          if ($key == '010') {
             if ($value > 0) {
@@ -188,7 +179,6 @@
                         <input type='hidden' name='item' value='010'>
                      </form></div>";
             }
-            }
          }
          if ($key == '011') {
             if ($value > 0) {
@@ -201,7 +191,6 @@
                         <input type='submit' class='deleteBtn' value= '-'>
                         <input type='hidden' name='item' value='011'>
                      </form></div>";
-            }
             }
          }
       }
