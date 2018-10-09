@@ -11,7 +11,13 @@
    <title>Squirreltopia - View Squirrels Cart</title>
 </head>
 <body>
-
+<header>
+   <h1>Squirrel Cart</h1>
+   <div class="flex">
+      <div class="linkPage"><a href="viewSquirrelsCart.php">View Cart</a></div>
+      <div class="linkPage"><a href="checkoutSquirrels.php">Checkout</a></div>
+   </div>
+</header>
    <!--
    000 = normal
    001 = happy
@@ -29,12 +35,8 @@
 
 
    <?php
-   //echo "<h1> BLAHHH!!!! </h1>"
-   if(isset($_SESSION["squirrels"]))
-      echo "It works <br>";
       foreach($_SESSION["squirrels"] as $key => $value)
       {
-         echo "SQUIRRELS!!<br>";
          if ($key == '000') {
             if ($value > 0) {
                echo "<p style = 'background-color:white;'>Normal Squirrel(s): $value <br></p>";

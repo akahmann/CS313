@@ -55,12 +55,12 @@ if(!isset($_SESSION["squirrels"]))
 </head>
 <body>
 <header>
-   <!-- <form action="confirmSquirrels.php" method="post">
-      <input type="submit" class="btn" value= "Add to Cart">
-      <input type="hidden" name="item" value="000">
-   </form> -->
    <h1>Squirreltopia</h1>
-   <a href="viewSquirrelsCart.php">View Cart</a>
+   <p class="intro">Here we love squirrels. You will love squirrels too. Buy a squirrel or a dozen! Only $1 per squirrel! Welcome to Squirreltopia!</p>
+   <div class="flex">
+      <div class="linkPage"><a href="viewSquirrelsCart.php">View Cart</a></div>
+      <div class="linkPage"><a href="checkoutSquirrels.php">Checkout</a></div>
+   </div>
 </header>
 
 <br>
