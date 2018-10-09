@@ -20,7 +20,7 @@
    </div>
 </header>
 
-   <form action="confirm.php" method = "post" style="font-family: verdana;">
+   <form action="confirm.php" method="post" class="myForm">
          <label>First Name</label>
          <br>
          <input type="text" id="fName" name="fName" value="">
@@ -36,6 +36,8 @@
          <br>
          <textarea style="width: 80%" rows="3" cols="50" value="" id="address" name="address"></textarea>
          <br> <br>
+         <input class="btn" type="submit">
+         <br>
    </form>
 
 </body>

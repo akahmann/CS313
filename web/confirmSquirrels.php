@@ -117,6 +117,13 @@
       echo "<p style='center'>Total: $" . "$total" . ".00</p>";
    ?>
 
+   <b>First Name:</b> <?php echo $_POST["fName"]; ?>
+   <br>
+   <b>Last Name:</b> <?php echo $_POST["lName"]; ?>
+   <br>
+   <b>Address:</b> <?php echo $_POST["address"]; ?>
+   <br>
+
    <form action="finalConfirmSquirrels.php" method="post">
       <input class="btn" type="submit" name="submit" value="Confirm Purchase">
       <input class="btn" type="submit" name="submit" value="Cancel Purchase">
