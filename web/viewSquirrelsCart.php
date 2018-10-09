@@ -100,7 +100,7 @@
          }
       }
 
-      echo "<p style='center'>Total: $total</p>"
+      echo "<p style='center'>Total: $total</p>";
 
       foreach($_SESSION["squirrels"] as $key => $value)
       {
