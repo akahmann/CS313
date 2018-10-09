@@ -13,7 +13,6 @@
 <body>
 <header>
    <h1>Checkout</h1>
-   <div class="intro">Please confirm if the order is correct.</div>
    <div class="flex">
       <div class="linkPage"><a href="browseSquirrels.php">Browse Squirrels</a></div>
       <div class="linkPage"><a href="checkoutSquirrels.php">View Cart</a></div>
