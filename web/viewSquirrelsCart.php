@@ -35,6 +35,73 @@
    -->
 
    <?php
+      $total;
+      foreach($_SESSION["squirrels"] as $key => $value)
+      {
+         if ($key == '000') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+         if ($key == '001') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+         if ($key == '002') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+         if ($key == '003') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+         if ($key == '004') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+         if ($key == '005') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+         if ($key == '006') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+         if ($key == '007') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+         if ($key == '008') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+         if ($key == '009') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+         if ($key == '010') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+         if ($key == '011') {
+            if ($value > 0) {
+               $total += $value;
+            }
+         }
+      }
+
+      echo "<p style='center'>Total: $total</p>"
+
       foreach($_SESSION["squirrels"] as $key => $value)
       {
          if ($key == '000') {
