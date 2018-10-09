@@ -118,10 +118,10 @@ p {
   color: rgb(218, 229, 222);
   border: 5px solid #161308; /*dark brown*/
   border-radius: 12px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   font-family: Bradley Hand, cursive;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin: 4px 2px;
   cursor: pointer;
@@ -137,10 +137,10 @@ p {
   color: rgb(218, 229, 222);
   border: 5px solid #161308; /*dark brown*/
   border-radius: 12px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   font-family: Bradley Hand, cursive;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin: 4px 2px;
   cursor: pointer;
