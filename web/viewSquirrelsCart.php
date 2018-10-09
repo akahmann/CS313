@@ -39,7 +39,7 @@
       {
          if ($key == '000') {
             if ($value > 0) {
-               echo "<div class='flex'><p class='purchase'>Normal Squirrel(s): $value <br></p>";
+               echo "<p class='purchase'>Normal Squirrel(s): $value <br></p>";
                echo "<form action='addSquirrelsBtn.php' method='post'>
                         <input type='submit' class='addBtn' value= '+'>
                         <input type='hidden' name='item' value='000'>
@@ -47,7 +47,7 @@
                echo "<form action='deleteSquirrelsBtn.php' method='post'>
                         <input type='submit' class='deleteBtn' value= '-'>
                         <input type='hidden' name='item' value='000'>
-                     </form></div>";
+                     </form>;
             }
          }
          if ($key == '001') {
