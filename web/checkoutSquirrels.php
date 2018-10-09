@@ -20,7 +20,7 @@
    </div>
 </header>
 
-   <form action="confirm.php" method="post" class="myForm">
+   <form action="confirmSquirrels.php" method="post" class="myForm">
          <label>First Name</label>
          <br>
          <input type="text" id="fName" name="fName" value="">
