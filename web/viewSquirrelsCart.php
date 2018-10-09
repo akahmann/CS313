@@ -99,8 +99,7 @@
             }
          }
       }
-
-      echo "<p style='center'>Total: $1." . "$total" . "00</p>";
+      echo "<p style='center'>Total: $" . "$total" . ".00</p>";
 
       foreach($_SESSION["squirrels"] as $key => $value)
       {

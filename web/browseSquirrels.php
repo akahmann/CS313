@@ -1,16 +1,6 @@
 <?php
 
-//setcookie("fav-text", "c is for cookie", time() + (86400 * 7));
 session_start();
-
-//?key=ProductName&value=ValueAmount
-//%20 = space
-
-// include 'addSquirrels.php';
-// echo $item;
-
-// include 'confirmSquirrels.php';
-// echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
 
 $squirrels = array();
 if(!isset($_SESSION["squirrels"]))
@@ -28,21 +18,6 @@ if(!isset($_SESSION["squirrels"]))
       '010' => 0,
       '011' => 0
    ]
-
-//echo $squirrels[000];
-
-//$_SESSION['cart'] = $cartArray;
-
-//var_dump($_SESSION["cart"]);
-
-// echo "<br>";
-
-// if(isset($_SESSION["cart"])) {
-//    foreach($_SESSION["cart"] as $productId) {
-//       echo "$productId <br>";
-//    }
-// }
-
 ?>
 
 <!DOCTYPE html>
