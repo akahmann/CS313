@@ -37,64 +37,64 @@
          echo "SQUIRRELS!!<br>";
          if ($key == '000') {
             if ($value > 0) {
-               echo "<p style = 'background-color:white;'>Normal Squirrel: $value <br></p>";
+               echo "<p style = 'background-color:white;'>Normal Squirrel(s): $value <br></p>";
             }
          }
          if ($key == '001') {
             if ($value > 0) {
-               echo "Happy Squirrel: $value <br>";
+               echo "<p style = 'background-color:white;'>Happy Squirrel: $value <br></p>";
             }
          }
          if ($key == '002') {
             if ($value > 0) {
-               echo "Heroic Squirrel: $value <br>";
+               echo "<p style = 'background-color:white;'>Heroic Squirrel: $value <br></p>";
             }
          }
          if ($key == '003') {
             if ($value > 0) {
-               echo "Evil Squirrel: $value <br>";
+               echo "<p style = 'background-color:white;'>Evil Squirrel: $value <br></p>";
             }
          }
          if ($key == '004') {
             if ($value > 0) {
-               echo "Fat Squirrel: $value <br>";
+               echo "<p style = 'background-color:white;'>Fat Squirrel: $value <br></p>";
             }
          }
          if ($key == '005') {
             if ($value > 0) {
-               echo "Knight Squirrel: $value <br>";
+               echo "<p style = 'background-color:white;'>Knight Squirrel: $value <br></p>";
             }
          }
          if ($key == '006') {
             if ($value > 0) {
-               echo "Superman Squirrel: $value <br>";
+               echo "<p style = 'background-color:white;'>Superman Squirrel: $value <br></p>";
             }
          }
          if ($key == '007') {
             if ($value > 0) {
-               echo "Thor Squirrel: $value <br>";
+               echo "<p style = 'background-color:white;'>Thor Squirrel: $value <br></p>";
             }
          }
-         // if ($key == 008) {
-         //    if ($value > 0) {
-         //       echo "Giant Squirrel: $value <br>";
-         //    }
-         // }
-         // if ($key == 009) {
-         //    if ($value > 0) {
-         //       echo "Hyena Squirrel: $value <br>";
-         //    }
-         // }==
-         // if ($key == 010) {
-         //    if ($value > 0) {
-         //       echo "Buff Squirrel: $value <br>";
-         //    }
-         // }
-         // if ($key == 011) {
-         //    if ($value > 0) {
-         //       echo "Invisible Squirrel: $value <br>";
-         //    }
-         // }
+         if ($key == 008) {
+            if ($value > 0) {
+               echo "<p style = 'background-color:white;'>Giant Squirrel: $value <br></p>";
+            }
+         }
+         if ($key == 009) {
+            if ($value > 0) {
+               echo "<p style = 'background-color:white;'>Hyena Squirrel: $value <br></p>";
+            }
+         }==
+         if ($key == 010) {
+            if ($value > 0) {
+               echo "<p style = 'background-color:white;'>Buff Squirrel: $value <br></p>";
+            }
+         }
+         if ($key == 011) {
+            if ($value > 0) {
+               echo "<p style = 'background-color:white;'>Invisible Squirrel: $value <br></p>";
+            }
+         }
       }
    ?>
 </body>
