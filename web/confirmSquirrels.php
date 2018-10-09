@@ -1,7 +1,5 @@
 <?php
    session_start();
-
-   $cars = array("Volvo", "BMW", "Toyota");
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +8,7 @@
    <meta charset="utf-8">
    <link rel="stylesheet" type="text/css" href="squirrels.css">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Squirreltopia - Browse Squirrels</title>
+   <title>Squirreltopia - Confirm Squirrels</title>
 </head>
 <body>
 <header>
@@ -117,12 +115,14 @@
       echo "<p style='center'>Total: $" . "$total" . ".00</p>";
    ?>
 
-   <b>First Name:</b> <?php echo $_POST["fName"]; ?>
-   <br>
-   <b>Last Name:</b> <?php echo $_POST["lName"]; ?>
-   <br>
-   <b>Address:</b> <?php echo $_POST["address"]; ?>
-   <br>
+   <div class="myForm">
+      <b>First Name:</b> <?php echo $_POST["fName"]; ?>
+      <br>
+      <b>Last Name:</b> <?php echo $_POST["lName"]; ?>
+      <br>
+      <b>Address:</b> <?php echo $_POST["address"]; ?>
+      <br>
+   </div>
 
    <form action="finalConfirmSquirrels.php" method="post">
       <input class="btn" type="submit" name="submit" value="Confirm Purchase">
