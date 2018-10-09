@@ -56,7 +56,7 @@ if(!isset($_SESSION["squirrels"]))
 <body>
 <header>
    <h1>Squirreltopia</h1>
-   <p class="intro">Here we love squirrels. You will love squirrels too. Buy a squirrel or a dozen! Only $1 per squirrel! Welcome to Squirreltopia!</p>
+   <div class="intro">Here we love squirrels. You will love squirrels too. Buy a squirrel or a dozen! Only $1 per squirrel! Welcome to Squirreltopia!</div>
    <div class="flex">
       <div class="linkPage"><a href="viewSquirrelsCart.php">View Cart</a></div>
       <div class="linkPage"><a href="checkoutSquirrels.php">Checkout</a></div>
