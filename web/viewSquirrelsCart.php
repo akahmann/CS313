@@ -47,7 +47,7 @@
                echo "<form action='deleteSquirrelsBtn.php' method='post'>
                         <input type='submit' class='deleteBtn' value= '-'>
                         <input type='hidden' name='item' value='000'>
-                     </form>;
+                     </form>";
             }
          }
          if ($key == '001') {
