@@ -95,3 +95,54 @@ p {
   font-size: 16px;
   text-align: center;
 }
+
+.purchase {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  font-family: Bradley Hand, cursive;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 4px 2px;
+}
+
+.addBtn {
+  background-color: rgb(32, 193, 94);
+  color: rgb(218, 229, 222);
+  border: 5px solid #161308; /*dark brown*/
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  font-family: Bradley Hand, cursive;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: rgb(218, 229, 222);
+  color: rgb(32, 193, 94);
+}
+
+.deleteBtn {
+  background-color: rgb(191, 53, 32);
+  color: rgb(218, 229, 222);
+  border: 5px solid #161308; /*dark brown*/
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  font-family: Bradley Hand, cursive;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background-color: rgb(218, 229, 222);
+  color: rgb(191, 53, 32);
+}
