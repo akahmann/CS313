@@ -66,3 +66,5 @@ CREATE TABLE reviews
 );
 
 --FOREIGN KEY = REFERENCES users(id)
+
+--Extra comment to commit
