@@ -44,7 +44,8 @@ catch (PDOException $ex)
                   "FROM genres gr" .
                   "JOIN games gm ON gr.id = gm.genreId" .
                   "JOIN developers d ON gm.developerId = d.id";
-         foreach ($db->query('select * FROM games') as $game)
+         $thing = "select * FROM games";
+         foreach ($db->query($thing) as $game)
          {
             echo "<b> " . $game['name'] . "</b> " . $game['name'] .
             ": " . $game['name'] . "<br>";
