@@ -55,6 +55,13 @@ function findPic($pic) {
    }
 }
 
+$stmt = $db->prepare("select gm.gmname, gr.grname, d.dname" .
+                     "FROM genres gr" .
+                     "JOIN games gm ON gr.id = gm.genreId" .
+                     "JOIN developers d ON gm.developerId = d.id");
+$stmt->execute();
+$games = $stmt->fetchALL(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -75,11 +82,7 @@ function findPic($pic) {
       alt="Ocarina of Time"><br>
       <?php
          // $thing = "select * FROM games";
-         $qry = "select gm.gmname, gr.grname, d.dname" .
-                  "FROM genres gr" .
-                  "JOIN games gm ON gr.id = gm.genreId" .
-                  "JOIN developers d ON gm.developerId = d.id";
-         foreach ($db->query($qry) as $game)
+         foreach ($games as $game)
          {
             echo "<b> " . $game['gmname'] . "</b> " .
             $game['grname'] . ": " . $game['dname'] . "<br>";
