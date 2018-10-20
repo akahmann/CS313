@@ -7,8 +7,10 @@
    <title>Rotten Potatoes</title>
 </head>
 <body>
+
+   <h1>Rotten Potatoes</h1>
+
    <div class='midbody'>
-      <h1>Rotten Potatoes</h1>
    </div>
 </body>
 </html>

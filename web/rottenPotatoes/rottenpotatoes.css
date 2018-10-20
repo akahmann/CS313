@@ -2,6 +2,13 @@ body {
    background-color: rgb(112, 96, 65);
 }
 
+h1 {
+   color: rgb(229, 218, 94);
+   font-weight: bold;
+   font-family: serif;
+   text-align: center;
+}
+
 .midbody {
    background-color: rgb(224, 197, 145);
    margin: 30px;
