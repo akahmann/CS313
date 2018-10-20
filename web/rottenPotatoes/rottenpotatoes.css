@@ -14,6 +14,7 @@ h1 {
 .midbody {
    background-color: rgb(224, 197, 145);
    margin: 30px;
+   padding: 10px;
 }
 
 .selectGamePic {
