@@ -41,14 +41,15 @@ catch (PDOException $ex)
       alt="Ocarina of Time"><br>
       <?php
          // $thing = "select * FROM games";
-         $qry = "select gm.name, gr.name, d.name" .
+         $qry = "select gm.name AS game_name, gr.name AS genre_name, " .
+                  "d.name AS developer_name" .
                   "FROM genres gr" .
                   "JOIN games gm ON gr.id = gm.genreId" .
                   "JOIN developers d ON gm.developerId = d.id";
          foreach ($db->query($qry) as $game)
          {
-            echo "<b> " . $game['gm.name'] . "</b> " . $game['gr.name'] .
-            ": " . $game['d.name'] . "<br>";
+            echo "<b> " . $game['game_name'] . "</b> " .
+            $game['genre_name'] . ": " . $game['developer_name'] . "<br>";
          }
       ?>
    </div>
