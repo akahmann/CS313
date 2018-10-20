@@ -10,7 +10,9 @@
 
    <h1>Rotten Potatoes</h1>
 
-   <div class='midbody'>
+   <div class="midbody">
+      <img class="selectGamePic" src="/rottenpotatoes/games/oot.jpg"><br>
    </div>
+
 </body>
 </html>
