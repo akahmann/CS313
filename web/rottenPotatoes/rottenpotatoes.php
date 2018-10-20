@@ -8,7 +8,7 @@
 </head>
 <body>
    <div class='midbody'>
-   <h1>Rotten Potatoes</h1>
+      <h1>Rotten Potatoes</h1>
    </div>
 </body>
 </html>
