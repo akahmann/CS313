@@ -4,10 +4,10 @@ body {
 
 h1 {
    color: rgb(229, 218, 94);
-   font-weight: bold;
+   /*font-weight: bold;*/
    font-family: Brush Script MT;
    text-align: center;
-   font-size: 60px;
+   font-size: 80px;
    font-style: italic;
 }
 
