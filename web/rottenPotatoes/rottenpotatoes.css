@@ -7,6 +7,8 @@ h1 {
    font-weight: bold;
    font-family: serif;
    text-align: center;
+   font-size: 40px;
+   font-style: italic;
 }
 
 .midbody {
