@@ -1,3 +1,29 @@
+<?php
+
+try
+{
+  $dbUrl = getenv('DATABASE_URL');
+
+  $dbOpts = parse_url($dbUrl);
+
+  $dbHost = $dbOpts["host"];
+  $dbPort = $dbOpts["port"];
+  $dbUser = $dbOpts["user"];
+  $dbPassword = $dbOpts["pass"];
+  $dbName = ltrim($dbOpts["path"],'/');
+
+  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $ex)
+{
+  echo 'Error!: ' . $ex->getMessage();
+  die();
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +39,16 @@
    <div class="midbody">
       <img class="selectGamePic" src="/rottenPotatoes/games/oot.jpg"
       alt="Ocarina of Time"><br>
+      <?php
+         $query = "select gm.name, gr.name, d.name" .
+                  "FROM genres gr" .
+                  "JOIN games gm ON gr.id = gm.genreId" .
+                  "JOIN developers d ON gm.developerId = d.id";
+         foreach ($db->query($query) as $game)
+         { //this is bad practice...only display what u need
+            echo "<b> " . $game['gm.name'] . "</b> " . $game['gr.name'] . ": " . $['d.name'] . "<br>";
+         }
+      ?>
    </div>
 
 </body>
