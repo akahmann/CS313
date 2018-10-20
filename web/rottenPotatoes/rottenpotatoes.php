@@ -40,12 +40,12 @@ catch (PDOException $ex)
       <img class="selectGamePic" src="/rottenPotatoes/games/oot.jpg"
       alt="Ocarina of Time"><br>
       <?php
-         $query = "select gm.name, gr.name, d.name" .
+         $qry = "select gm.name, gr.name, d.name" .
                   "FROM genres gr" .
                   "JOIN games gm ON gr.id = gm.genreId" .
                   "JOIN developers d ON gm.developerId = d.id";
-         foreach ($db->query($query) as $game)
-         { //this is bad practice...only display what u need
+         foreach ($db->query($qry) as $game)
+         {
             echo "<b> " . $game['gm.name'] . "</b> " . $game['gr.name'] .
             ": " . $game['d.name'] . "<br>";
          }
