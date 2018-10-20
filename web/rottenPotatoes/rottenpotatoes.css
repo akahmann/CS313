@@ -5,7 +5,7 @@ body {
 h1 {
    color: rgb(229, 218, 94);
    font-weight: bold;
-   font-family: serif;
+   font-family: serif, cursive;
    text-align: center;
    font-size: 40px;
    font-style: italic;
