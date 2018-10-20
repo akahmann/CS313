@@ -11,7 +11,7 @@
    <h1>Rotten Potatoes</h1>
 
    <div class="midbody">
-      <img class="selectGamePic" src="/web/rottenpotatoes/games/oot.jpg"
+      <img class="selectGamePic" src="rottenpotatoes/games/oot.jpg"
       alt="Ocarina of Time"><br>
    </div>
 
