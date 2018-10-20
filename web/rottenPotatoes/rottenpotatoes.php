@@ -46,7 +46,8 @@ catch (PDOException $ex)
                   "JOIN developers d ON gm.developerId = d.id";
          foreach ($db->query($query) as $game)
          { //this is bad practice...only display what u need
-            echo "<b> " . $game['gm.name'] . "</b> " . $game['gr.name'] . ": " . $['d.name'] . "<br>";
+            echo "<b> " . $game['gm.name'] . "</b> " . $game['gr.name'] .
+            ": " . $game['d.name'] . "<br>";
          }
       ?>
    </div>
