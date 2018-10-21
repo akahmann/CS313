@@ -75,7 +75,7 @@ function findPic($pic) {
 
       $qry = "select id, name FROM games";
       foreach ($db->query($qry) as $game) {
-         $qry2 = "select score, gameId FROM reviews";
+         //$qry2 = "select score, gameId FROM reviews";
          // $average;
          // $total;
          // $count;
@@ -92,7 +92,7 @@ function findPic($pic) {
          // $average = $total / $count; //find the average score
          findPic($game['name']);
          echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?name="
-               . $game['name'] . "'" . $game['name'] . "</a>";
+               . $game['name'] . "'>" . $game['name'] . "</a>";
          //echo "<br>Average Score: $average";
          //getScore($game);
          echo "<br><br><br>";
