@@ -55,12 +55,14 @@ function findPic($pic) {
    }
 }
 
-// $stmt = $db->prepare("select gm.gmname, gr.grname, d.dname" .
-//                      "FROM genres gr" .
-//                      "JOIN games gm ON gr.id = gm.genreId" .
-//                      "JOIN developers d ON gm.developerId = d.id");
-// $stmt->execute();
-// $games = $stmt->fetchALL(PDO::FETCH_ASSOC);
+function getScore() {
+   $qry2 = "select name, score
+            FROM reviews
+            JOIN games ON gameId = id;";
+   foreach ($db->query($qry2) as $score){
+      echo $score['name'] . " " . $score['score'] . "<br>";
+   }
+}
 
 ?>
 
@@ -79,6 +81,7 @@ function findPic($pic) {
 
 <div class="midbody">
    <?php
+      getScore();
       $qry = "select name FROM games";
       foreach ($db->query($qry) as $game)
       {
