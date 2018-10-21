@@ -75,6 +75,7 @@ findPic($name);
 $qry = "select text, gameId FROM reviews";
       foreach ($db->query($qry) as $review) {
          echo "<p>" . $review['text'] . "</p>";
+         echo "<br><br>" . $review['gameId'] . "<br><br>";
       }
 
 ?>
