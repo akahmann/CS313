@@ -23,37 +23,35 @@ catch (PDOException $ex)
 }
 
 function findPic($pic) {
-   echo "In function<br>";
-   echo "$pic <br>";
    if ($pic == "The Legend of Zelda: Ocarina of Time") {
       echo "<img class='selectGamePic'" .
            " src='/rottenPotatoes/games/oot.jpg'" .
-           "alt='The Legend of Zelda: Ocarina of Time'>'";
+           "alt='The Legend of Zelda: Ocarina of Time'>";
    }
    else if ($pic == "Super Mario World") {
       echo "<img class='selectGamePic'" .
            " src='/rottenPotatoes/games/smw.jpg'" .
-           "alt='Super Mario World'>'";
+           "alt='Super Mario World'>";
    }
    else if ($pic == "Paper Mario") {
       echo "<img class='selectGamePic'" .
            " src='/rottenPotatoes/games/pmario.jpg'" .
-           "alt='Paper Mario'>'";
+           "alt='Paper Mario'>";
    }
    else if ($pic == "Final Fantasy VII") {
       echo "<img class='selectGamePic'" .
            " src='/rottenPotatoes/games/ff7.jpg'" .
-           "alt='Final Fantasy VII'>'";
+           "alt='Final Fantasy VII'>";
    }
    else if ($pic == "Undertale") {
       echo "<img class='selectGamePic'" .
            " src='/rottenPotatoes/games/undertale.jpg'" .
-           "alt='Undertale'>'";
+           "alt='Undertale'>";
    }
    else if ($pic == "StarCraft 2") {
       echo "<img class='selectGamePic'" .
            " src='/rottenPotatoes/games/sc2.jpg'" .
-           "alt='StarCraft 2'>'";
+           "alt='StarCraft 2'>";
    }
 }
 
@@ -80,14 +78,12 @@ function findPic($pic) {
    <h1>Rotten Potatoes</h1>
 
    <div class="midbody">
-      <img class="selectGamePic" src="/rottenPotatoes/games/oot.jpg"
-      alt="Ocarina of Time"><br>
       <?php
          $qry = "select name FROM games";
          foreach ($db->query($qry) as $game)
          {
             findPic($game['name']);
-            echo "<b>" . $game['name'] . "</b><br>";
+            echo "<b>" . $game['name'] . "</b><br><br>";
          }
       ?>
    </div>
