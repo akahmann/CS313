@@ -91,8 +91,8 @@ function findPic($pic) {
          // }
          // $average = $total / $count; //find the average score
          findPic($game['name']);
-         echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?name="
-               . $game['name'] . "'>" . $game['name'] . "</a>";
+         echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
+               . $game['id'] . "&name=" . $game['name'] . "'>" . $game['name'] . "</a>";
          //echo "<br>Average Score: $average";
          //getScore($game);
          echo "<br><br><br>";
