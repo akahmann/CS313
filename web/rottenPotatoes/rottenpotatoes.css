@@ -15,17 +15,13 @@ h1 {
    background-color: rgb(224, 197, 145);
    margin: 30px;
    padding: 20px;
+   text-align: center;
 }
 
 .selectGamePic {
    width: 30%;
    height: auto;
-   /*margin-left: auto;
-   margin-right: auto;*/
+   margin-left: auto;
+   margin-right: auto;
    display: block;
-   float: left;
-}
-
-.fr {
-   /*float: right;*/
 }
