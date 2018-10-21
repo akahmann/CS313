@@ -81,13 +81,15 @@ function findPic($pic) {
             $total;
             $count;
             if ($game['id'] == $score['gameId']) {
+               echo "This is score: " . $score['score'] . "<br>";
                $total += $score['score'];
                $count++;
             }
             $average = $total / $count; //find the average score
          }
          findPic($game['name']);
-         echo "<br>" . $game['name'] . " Average Score: $average";
+         echo "<br>" . $game['name'];
+         echo "<br>Average Score: $average";
          //getScore($game);
          echo "<br><br><br>";
       }
