@@ -81,13 +81,14 @@ function getScore() {
 
 <div class="midbody">
    <?php
-      getScore();
+
       $qry = "select name FROM games";
       foreach ($db->query($qry) as $game)
       {
          findPic($game['name']);
          echo "<br>" . $game['name'] . "<br><br><br>";
       }
+      getScore();
    ?>
 </div>
 
