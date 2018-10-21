@@ -55,14 +55,6 @@ function findPic($pic) {
    }
 }
 
-function getScore() {
-   //echo $array['name'];
-   $qry2 = "select score FROM reviews";
-   foreach ($db->query($qry2) as $score){
-      echo $score['score'] . "<br>";
-   }
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -83,12 +75,19 @@ function getScore() {
 
       $qry = "select id, name FROM games";
       foreach ($db->query($qry) as $game) {
-         findPic($game['name']);
-         echo "<br>" . $game['name'];
-         $qry2 = "select score FROM reviews";
+         $qry2 = "select score, gameId FROM reviews";
+         $average;
          foreach ($db->query($qry2) as $score) {
-            echo $score['score'] . "<br>";
+            $total;
+            $count;
+            if ($game['id'] == $score['gameId']) {
+               $total += $score['score'];
+               $count++;
+            }
+            $average = $total / $count; //find the average score
          }
+         findPic($game['name']);
+         echo "<br>" . $game['name'] . " Average Score: $average";
          //getScore($game);
          echo "<br><br><br>";
       }
