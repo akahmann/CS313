@@ -55,12 +55,12 @@ function findPic($pic) {
    }
 }
 
-function getScore($array) {
-   echo $array['name'];
-   // $qry2 = "select score FROM reviews";
-   // foreach ($db->query($qry2) as $score){
-   //    echo $score['score'] . "<br>";
-   // }
+function getScore() {
+   //echo $array['name'];
+   $qry2 = "select score FROM reviews";
+   foreach ($db->query($qry2) as $score){
+      echo $score['score'] . "<br>";
+   }
 }
 
 ?>
@@ -81,13 +81,13 @@ function getScore($array) {
 <div class="midbody">
    <?php
 
-
+      getScore();
       $qry = "select id, name FROM games";
       foreach ($db->query($qry) as $game)
       {
          findPic($game['name']);
          echo "<br>" . $game['name'];
-         echo getScore($game);
+         //getScore($game);
          echo "<br><br><br>";
       }
       //getScore();
