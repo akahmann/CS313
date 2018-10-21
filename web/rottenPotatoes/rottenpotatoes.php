@@ -82,19 +82,18 @@ function getScore() {
    <?php
 
       $qry = "select id, name FROM games";
-      foreach ($db->query($qry) as $game)
-      {
+      foreach ($db->query($qry) as $game) {
          findPic($game['name']);
          echo "<br>" . $game['name'];
+         $qry2 = "select score FROM reviews";
+         foreach ($db->query($qry2) as $score) {
+            echo $score['score'] . "<br>";
+         }
          //getScore($game);
          echo "<br><br><br>";
       }
 
-   //    $qry2 = "select score FROM reviews";
-   // foreach ($db->query($qry2) as $score){
-   //    echo $score['score'] . "<br>";
-   // }
-      getScore();
+      //getScore();
    ?>
 </div>
 
