@@ -77,8 +77,8 @@ function findPic($pic) {
       foreach ($db->query($qry) as $game) {
         $name = $game['name'];
         $qry2 = "select score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = '$name'";
-        $average;
-        $count;
+        $average = 0;
+        $count = 0;
         foreach ($db->query($qry2) as $score) {
           $average += $score['score'];
           $count++;
