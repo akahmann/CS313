@@ -23,8 +23,9 @@ h1 {
    /*margin-left: auto;
    margin-right: auto;*/
    display: block;
+   float: left;
 }
 
 .fr {
-   float: right;
+   /*float: right;*/
 }
