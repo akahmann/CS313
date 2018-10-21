@@ -90,11 +90,11 @@ function getScore() {
          echo "<br><br><br>";
       }
 
-      $qry2 = "select score FROM reviews";
-   foreach ($db->query($qry2) as $score){
-      echo $score['score'] . "<br>";
-   }
-      //getScore();
+   //    $qry2 = "select score FROM reviews";
+   // foreach ($db->query($qry2) as $score){
+   //    echo $score['score'] . "<br>";
+   // }
+      getScore();
    ?>
 </div>
 
