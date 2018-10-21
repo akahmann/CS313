@@ -87,7 +87,7 @@ function getScore($array) {
       {
          findPic($game['name']);
          echo "<br>" . $game['name'];
-         echo getScore($game);
+         //echo getScore($game);
          echo "<br><br><br>";
       }
       //getScore();
