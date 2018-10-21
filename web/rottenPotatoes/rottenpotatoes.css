@@ -24,3 +24,7 @@ h1 {
    margin-right: auto;*/
    display: block;
 }
+
+.fr {
+   float: right;
+}

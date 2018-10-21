@@ -75,18 +75,18 @@ function findPic($pic) {
 </head>
 <body>
 
-   <h1>Rotten Potatoes</h1>
+<h1>Rotten Potatoes</h1>
 
-   <div class="midbody">
-      <?php
-         $qry = "select name FROM games";
-         foreach ($db->query($qry) as $game)
-         {
-            findPic($game['name']);
-            echo "<b>" . $game['name'] . "</b><br><br>";
-         }
-      ?>
-   </div>
+<div class="midbody">
+   <?php
+      $qry = "select name FROM games";
+      foreach ($db->query($qry) as $game)
+      {
+         findPic($game['name']);
+         echo "<div class='fr'><b>" . $game['name'] . "</b></div><br><br>";
+      }
+   ?>
+</div>
 
 </body>
 </html>
