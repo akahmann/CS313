@@ -87,7 +87,7 @@ function findPic($pic) {
         findPic($name);
         echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
               . $game['id'] . "&name=" . $name . "'>" . $name . "</a>";
-        //echo "<br>Average Score: $average";
+        echo "<br>Average Score: $average";
         //getScore($game);
         echo "<br><br><br>";
       }
