@@ -89,6 +89,7 @@ function getScore() {
       //$qry = "select name FROM games";
       foreach ($db->query($qry) as $game)
       {
+         echo "In loop<br>"
          findPic($game['name']);
          echo "<br>" . $game['name'] . "<br><br><br>";
       }
