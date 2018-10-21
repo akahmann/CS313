@@ -77,17 +77,16 @@ function findPic($pic) {
       foreach ($db->query($qry) as $game) {
          $qry2 = "select score, gameId FROM reviews";
          $average;
+         $total;
+         $count;
          foreach ($db->query($qry2) as $score) {
-            echo "In Loop <br>";
-            $total;
-            $count;
             if ($game['id'] == $score['gameId']) {
                echo "This is score: " . $score['score'] . "<br>";
                $total += $score['score'];
                $count++;
             }
-            $average = $total / $count; //find the average score
          }
+         $average = $total / $count; //find the average score
          findPic($game['name']);
          echo "<br>" . $game['name'];
          echo "<br>Average Score: $average";
