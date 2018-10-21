@@ -24,6 +24,7 @@ catch (PDOException $ex)
 
 function findPic($pic) {
    echo "In function<br>";
+   echo "$pic <br>";
    if ($pic == "The Legend of Zelda: Ocarina of Time") {
       echo "<img class='selectGamePic'" .
            " src='/rottenPotatoes/games/oot.jpg'" .
