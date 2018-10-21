@@ -57,10 +57,10 @@ function findPic($pic) {
 
 function getScore($array) {
    echo $array['name'];
-   $qry2 = "select score FROM reviews";
-   foreach ($db->query($qry2) as $score){
-      echo $score['score'] . "<br>";
-   }
+   // $qry2 = "select score FROM reviews";
+   // foreach ($db->query($qry2) as $score){
+   //    echo $score['score'] . "<br>";
+   // }
 }
 
 ?>
