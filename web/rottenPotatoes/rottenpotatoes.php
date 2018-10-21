@@ -78,6 +78,7 @@ function findPic($pic) {
          $qry2 = "select score, gameId FROM reviews";
          $average;
          foreach ($db->query($qry2) as $score) {
+            echo "In Loop <br>";
             $total;
             $count;
             if ($game['id'] == $score['gameId']) {
