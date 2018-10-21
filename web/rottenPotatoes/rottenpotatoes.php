@@ -80,6 +80,8 @@ function findPic($pic) {
          $total;
          $count;
          foreach ($db->query($qry2) as $score) {
+            echo "id: " . $game['id'];
+            echo "gameId: " . $score['gameId'];
             if ($game['id'] == $score['gameId']) {
                echo "This is score: " . $score['score'] . "<br>";
                $total += $score['score'];
