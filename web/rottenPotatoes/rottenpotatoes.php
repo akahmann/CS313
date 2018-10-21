@@ -55,12 +55,11 @@ function findPic($pic) {
    }
 }
 
-function getScore() {
-   $qry2 = "select name, score
-            FROM reviews
-            JOIN games ON gameId = id;";
+function getScore($array) {
+   echo $array['name'];
+   $qry2 = "select score FROM reviews";
    foreach ($db->query($qry2) as $score){
-      echo $score['name'] . " " . $score['score'] . "<br>";
+      echo $score['score'] . "<br>";
    }
 }
 
@@ -83,15 +82,13 @@ function getScore() {
    <?php
 
 
-      $qry = "select name, score
-            FROM reviews
-            JOIN games ON gameId = id;";
-      //$qry = "select name FROM games";
+      $qry = "select id, name FROM games";
       foreach ($db->query($qry) as $game)
       {
-         echo "In loop<br>";
          findPic($game['name']);
-         echo "<br>" . $game['name'] . "<br><br><br>";
+         echo "<br>" . $game['name'];
+         echo getScore($game);
+         echo "<br><br><br>";
       }
       //getScore();
    ?>
