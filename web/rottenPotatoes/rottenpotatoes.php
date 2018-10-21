@@ -84,6 +84,7 @@ function findPic($pic) {
       {
          findPic($game['name']);
          echo "<div class='fr'><b>" . $game['name'] . "</b></div><br><br>";
+         echo "<br><br><br><br><br><br><br>"
       }
    ?>
 </div>
