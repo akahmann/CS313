@@ -84,7 +84,7 @@ function findPic($pic) {
          $qry = "select name FROM games";
          foreach ($db->query($qry) as $game)
          {
-            echo getPic($game) . "<b>" . $game['name'] . "</b><br>";
+            echo "<b>" . $game['name'] . "</b><br>";
          }
       ?>
    </div>
