@@ -72,7 +72,7 @@ function findPic($pic) {
 $name = $_GET['name'];
 findPic($name);
 
-$qry = "select text, gameId FROM reviews";
+$qry = "select text, gameId FROM reviews JOIN games g ON gameId = g.id";
       foreach ($db->query($qry) as $review) {
          echo "<p>" . $review['text'] . "</p>";
          echo "<br><br>" . $review['gameId'] . "<br><br>";
