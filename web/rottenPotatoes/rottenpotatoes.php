@@ -81,7 +81,6 @@ function getScore() {
 <div class="midbody">
    <?php
 
-      getScore();
       $qry = "select id, name FROM games";
       foreach ($db->query($qry) as $game)
       {
@@ -90,6 +89,11 @@ function getScore() {
          //getScore($game);
          echo "<br><br><br>";
       }
+
+      $qry2 = "select score FROM reviews";
+   foreach ($db->query($qry2) as $score){
+      echo $score['score'] . "<br>";
+   }
       //getScore();
    ?>
 </div>
