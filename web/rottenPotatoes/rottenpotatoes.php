@@ -82,13 +82,17 @@ function getScore() {
 <div class="midbody">
    <?php
 
-      $qry = "select name FROM games";
+
+      $qry = "select name, score
+            FROM reviews
+            JOIN games ON gameId = id;";
+      //$qry = "select name FROM games";
       foreach ($db->query($qry) as $game)
       {
          findPic($game['name']);
          echo "<br>" . $game['name'] . "<br><br><br>";
       }
-      getScore();
+      //getScore();
    ?>
 </div>
 
