@@ -41,7 +41,8 @@ Verse: <input type="text" name="verse"><br>
    $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
    foreach($topics as $topic) {
       $topicName = $topic['name'];
-      echo "<input type='checkbox' name='topic[]' value ='$topicName'> $topicName <br>";
+      $topicId = $topic['id'];
+      echo "<input type='checkbox' name='topic[]' value ='$topicId'> $topicName <br>";
    }
 ?>
 <input type="submit" value="Submit">
