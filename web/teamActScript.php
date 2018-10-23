@@ -35,7 +35,7 @@ catch (PDOException $ex)
    $stmt->execute();
    $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
    foreach($topics as $topic) {
-      $topicName - $topic['name'];
+      $topicName = $topic['name'];
       echo "<input type='checkbox' name='topic[]' value ='$topicName'> $topicName <br>";
    }
 ?>
