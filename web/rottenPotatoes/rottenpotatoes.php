@@ -92,7 +92,11 @@ function findPic($pic) {
         echo "<br><br><br>";
       }
 
-      //getScore();
+      // $qry3 = "select gm.name AS gmname, gr.name AS grname, d.name AS dname" .
+      //        "FROM genres gr JOIN games gm ON gr.id = gm.genreId" .
+      //        "JOIN developers d ON gm.developerId = d.id;";
+      // foreach ($db->query($qry3) as $)
+      // //getScore();
    ?>
    <a href=""></a>
 </div>

@@ -152,7 +152,7 @@ SELECT org.name, r.firstName, r.lastName FROM organizations org
    JOIN reviewerOrganizations rorg ON org.id = rorg.organizationId
    JOIN reviewers r ON rorg.reviewerId = r.id;
 
-SELECT gm.gmname, gr.grname, d.dname
+SELECT gm.name AS gmname, gr.name AS grname, d.name AS dname
 FROM genres gr
 JOIN games gm ON gr.id = gm.genreId
 JOIN developers d ON gm.developerId = d.id;

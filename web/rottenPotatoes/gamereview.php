@@ -73,6 +73,8 @@ $name = $_GET['name'];
 findPic($name);
 echo "<br>";
 $qry = "select text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name='$name'";
+//$db->prepare($qry)
+//$db->bindValue(":Bob", $name, PDO::PARAM_STR)
       foreach ($db->query($qry) as $review) {
          echo "<p>" . $review['text'] . "</p>";
          echo "Score Given: " . $review['score'] . "<br><br>";
