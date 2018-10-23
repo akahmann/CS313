@@ -30,6 +30,11 @@ catch (PDOException $ex)
    <title></title>
 </head>
 <body>
+
+<form method="post" action="theActionTAScript.php">
+Book: <input type="text" name="book"><br>
+Chapter: <input type="text" name="chapter"><br>
+Verse: <input type="text" name="verse"><br>
 <?php
    $stmt = $db->prepare('select * FROM topic');
    $stmt->execute();
@@ -39,7 +44,8 @@ catch (PDOException $ex)
       echo "<input type='checkbox' name='topic[]' value ='$topicName'> $topicName <br>";
    }
 ?>
-<form></form>
+<input type="submit" value="Submit">
+</form>
 
 </body>
 </html>
