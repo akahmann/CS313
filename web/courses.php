@@ -19,6 +19,7 @@
 <body>
    <h1>Course</h1>
 
+   <ul>
 <?php
 
    foreach ($courses as $course) {
@@ -26,10 +27,12 @@
       $name = $course['id'];
       $code = $course['code'];
 
-      echo "<li><p>$code - $name</p></li>\n";
+      echo "<li><p><a href='notes.php?id=$id'>$code - $name</p></li>\n";
    }
 
 ?>
+   </ul>
+
 
 </body>
 </html>
