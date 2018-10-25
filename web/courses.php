@@ -1,6 +1,6 @@
 <?php
 
-   require('dbConnect.php');
+   require('practice.php');
 
    $db = get_db();
 
