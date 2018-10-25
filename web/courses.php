@@ -8,7 +8,7 @@
 
    $stmt = $db->prepare($query);
    $stmt->execute();
-   $stmt->fetchAll(PDO::FETCH_ASSOC);
+   $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
 
 <?php
 
-   foreach ($course as $course) {
+   foreach ($courses as $course) {
       $id = $course['id'];
       $name = $course['id'];
       $code = $course['code'];
