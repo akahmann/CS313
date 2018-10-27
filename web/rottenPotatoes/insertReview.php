@@ -9,7 +9,7 @@ $gameName = htmlspecialchars($_POST['gameName']);
 //From server
 $date = getdate();
 
-$insertStmt = "INSERT INTO reviews (text, date, score, likes, userId, organizationId, gameId) VALUES (:text, $date, :score, 0, 1, NULL, :gameId);";
+$insertStmt = 'INSERT INTO reviews (text, date, score, likes, userId, organizationId, gameId) VALUES (:text, $date, :score, 0, 1, NULL, :gameId)';
 
 require('connectRPDB.php');
 $db = get_db();
