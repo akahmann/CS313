@@ -9,8 +9,6 @@ $stmt = $db->prepare($query);
 $stmt->execute();
 $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$picLink = $game['picLink'];
-
 function findPic($pic) {
    if ($pic == "The Legend of Zelda: Ocarina of Time") {
       echo "<img class='selectGamePic'" .
@@ -64,6 +62,7 @@ function findPic($pic) {
 
       foreach ($games as $game) {
          $name = $game['name'];
+         $picLink = $game['picLink'];
          $qry2 = "SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = '$name'";
          $average = 0;
          $count = 0;
