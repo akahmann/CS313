@@ -3,7 +3,7 @@
 require('connectRPDB.php');
 $db = get_db();
 
-$gameId = htmlspecialchars($_GET['id']);
+$id = htmlspecialchars($_GET['id']);
 $name = htmlspecialchars($_GET['name']);
 
 $query = 'SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name';
@@ -74,7 +74,7 @@ foreach ($reviews as $review) {
 ?>
 
 <form method="post" action="insertReview.php">
-  <input type="hidden" name="gameId" value="<?php echo $gameId; ?>">
+  <input type="hidden" name="id" value="<?php echo $id; ?>">
   <input type="hidden" name="gameName" value="<?php echo $name; ?>">
   <textarea name="text"></textarea>
   <input type="text" name="score">

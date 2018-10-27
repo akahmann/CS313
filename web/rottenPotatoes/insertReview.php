@@ -3,7 +3,7 @@
 //From client
 $text = htmlspecialchars($_POST['text']);
 $score = htmlspecialchars($_POST['score']);
-$gameId = htmlspecialchars($_POST['gameId']);
+$gameId = htmlspecialchars($_POST['id']);
 $gameName = htmlspecialchars($_POST['gameName']);
 
 //From server
