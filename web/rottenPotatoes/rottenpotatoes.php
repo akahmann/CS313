@@ -99,8 +99,6 @@ function findPic($pic) {
          $count = 0;
          //foreach ($db->query($qry2) as $score) {
          foreach ($scores as $score) {
-            $test = $score['score'];
-            echo "This is test: $test<br>";
             $average += $score['score'];
             $count++;
          }

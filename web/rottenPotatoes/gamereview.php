@@ -22,6 +22,17 @@
 //   die();
 // }
 
+require('connectRPDB.php');
+
+$db = get_db();
+
+$query = 'SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name';
+
+$stmt = $db->prepare($query);
+$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+$stmt->execute();
+$reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 function findPic($pic) {
    if ($pic == "The Legend of Zelda: Ocarina of Time") {
       echo "<img class='selectGamePic'" .
@@ -72,13 +83,14 @@ function findPic($pic) {
 $name = $_GET['name'];
 findPic($name);
 echo "<br>";
-$qry = "SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name";
-$db->prepare($qry);
-$db->bindValue(":name", $name, PDO::PARAM_STR);
-      foreach ($db->query($qry) as $review) {
-         echo "<p>" . $review['text'] . "</p>";
-         echo "Score Given: " . $review['score'] . "<br><br>";
-      }
+// $qry = "SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name";
+// $db->prepare($qry);
+// $db->bindValue(":name", $name, PDO::PARAM_STR);
+//       foreach ($db->query($qry) as $review) {
+foreach ($reviews as $review) {
+  echo "<p>" . $review['text'] . "</p>";
+  echo "Score Given: " . $review['score'] . "<br><br>";
+}
 
 ?>
 </div>
