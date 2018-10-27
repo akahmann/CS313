@@ -66,7 +66,7 @@ CREATE TABLE reviews
 (
    id SERIAL PRIMARY KEY
    , text TEXT NOT NULL
-   , date DATE NOT NULL
+   , date DATE
    , score INT NOT NULL
    , CHECK (score >= 0 AND score <= 100)
    , likes INT
