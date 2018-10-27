@@ -18,7 +18,7 @@ $stmt->bindValue(':text', $text, PDO::PARAM_STR);
 $stmt->bindValue(':score', $score, PDO::PARAM_INT);
 $stmt->bindValue(':gameId', $gameId, PDO::PARAM_INT);
 $stmt->execute();
-$new_page = "<a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id=$gameId&name=$gameName";
+$new_page = "https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id=$gameId&name=$gameName";
 header("Location: $new_page");
 die();
 
