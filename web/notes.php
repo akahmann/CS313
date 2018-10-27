@@ -12,6 +12,8 @@
    $stmt->execute();
    $notes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+   //TODO: Check that we got data (valid course)
+
    $course_name = $notes[0]['name'];
    $course_code = $notes[0]['code'];
 

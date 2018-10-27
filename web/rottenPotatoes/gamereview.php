@@ -1,26 +1,26 @@
 <?php
 
-try
-{
-  $dbUrl = getenv('DATABASE_URL');
+// try
+// {
+//   $dbUrl = getenv('DATABASE_URL');
 
-  $dbOpts = parse_url($dbUrl);
+//   $dbOpts = parse_url($dbUrl);
 
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
+//   $dbHost = $dbOpts["host"];
+//   $dbPort = $dbOpts["port"];
+//   $dbUser = $dbOpts["user"];
+//   $dbPassword = $dbOpts["pass"];
+//   $dbName = ltrim($dbOpts["path"],'/');
 
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+//   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
+//   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// }
+// catch (PDOException $ex)
+// {
+//   echo 'Error!: ' . $ex->getMessage();
+//   die();
+// }
 
 function findPic($pic) {
    if ($pic == "The Legend of Zelda: Ocarina of Time") {
@@ -72,9 +72,9 @@ function findPic($pic) {
 $name = $_GET['name'];
 findPic($name);
 echo "<br>";
-$qry = "select text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name='$name'";
-//$db->prepare($qry)
-//$db->bindValue(":Bob", $name, PDO::PARAM_STR)
+$qry = "SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name";
+$db->prepare($qry);
+$db->bindValue(":name", $name, PDO::PARAM_STR);
       foreach ($db->query($qry) as $review) {
          echo "<p>" . $review['text'] . "</p>";
          echo "Score Given: " . $review['score'] . "<br><br>";
