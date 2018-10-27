@@ -65,7 +65,7 @@ CREATE TABLE games
 CREATE TABLE reviews
 (
    id SERIAL PRIMARY KEY
-   , text VARCHAR(1000) NOT NULL
+   , text TEXT NOT NULL
    , date DATE NOT NULL
    , score INT NOT NULL
    , CHECK (score >= 0 AND score <= 100)
