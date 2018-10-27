@@ -23,8 +23,10 @@
 // }
 
 require('connectRPDB.php');
-
 $db = get_db();
+
+$name = $_GET['name'];
+
 
 $query = 'SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name';
 
@@ -80,7 +82,6 @@ function findPic($pic) {
 <div class="midbody">
 <?php
 
-$name = $_GET['name'];
 findPic($name);
 echo "<br>";
 // $qry = "SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name";

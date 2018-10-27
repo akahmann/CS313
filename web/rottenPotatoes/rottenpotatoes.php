@@ -23,7 +23,6 @@
 // }
 
 require('connectRPDB.php');
-
 $db = get_db();
 
 $query = 'SELECT id, name FROM games';
@@ -31,6 +30,8 @@ $query = 'SELECT id, name FROM games';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$name = $game['name'];
 
 $query = 'SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = :name';
 
@@ -93,7 +94,7 @@ function findPic($pic) {
       //$qry = "SELECT id, name FROM games";
       //foreach ($db->query($qry) as $game) {
       foreach ($games as $game) {
-         $name = $game['name'];
+         //$name = $game['name'];
          //$qry2 = "SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = '$name'";
          $average = 0;
          $count = 0;
