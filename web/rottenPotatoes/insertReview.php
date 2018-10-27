@@ -11,7 +11,7 @@ $date = getdate();
 
 $insertStmt = 'INSERT INTO reviews (text, date, score, likes, userId, organizationId, gameId) VALUES (:text, "$date", :score, 0, 1, NULL, :gameId);'
 
-require('dbConnect.php');
+require('connectRPDB.php');
 $db = get_db();
 $stmt = $db->prepare('$insertStmt');
 $stmt->bindValue(':text', $text, PDO::PARAM_STR);
