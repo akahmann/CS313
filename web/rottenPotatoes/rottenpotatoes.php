@@ -73,6 +73,7 @@ function findPic($pic) {
          }
          $average = $average / $count; //find the average score
          //findPic($name);
+         echo "This is $picLink <br>";
          echo "<img class='selectGamePic' src='$picLink' alt='$name'><br>";
          echo "<a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
                . $game['id'] . "&name=" . $name . "'>" . $name . "</a>";
