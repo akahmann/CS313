@@ -71,7 +71,7 @@ function findPic($pic) {
             $count++;
          }
          $average = $average / $count; //find the average score
-         round($average, 2);
+         $average = round($average, 2);
          findPic($name);
          //echo "This is $picLink <br>";
          //echo "<img class='selectGamePic' src='$picLink' alt='$name'>";
