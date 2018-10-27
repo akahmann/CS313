@@ -31,6 +31,12 @@ $stmt = $db->prepare($query);
 $stmt->execute();
 $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+// $query2 = 'SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = :name';
+// $stmt2 = $db->prepare($query);
+// $stmt2->bindValue(':name', $name, PDO::PARAM_STR);
+// $stmt2->execute();
+// $scores = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 function findPic($pic) {
    if ($pic == "The Legend of Zelda: Ocarina of Time") {
       echo "<img class='selectGamePic'" .
@@ -86,18 +92,11 @@ function findPic($pic) {
       //foreach ($db->query($qry) as $game) {
       foreach ($games as $game) {
          $name = $game['name'];
-         //$qry2 = "SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = '$name'";
+         $qry2 = "SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = '$name'";
          $average = 0;
          $count = 0;
-         //foreach ($db->query($qry2) as $score) {
-         foreach ($scores as $score) {
-
-            $query2 = 'SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = :name';
-            $stmt2 = $db->prepare($query);
-            $stmt2->bindValue(':name', $name, PDO::PARAM_STR);
-            $stmt2->execute();
-            $scores = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+         foreach ($db->query($qry2) as $score) {
+         //foreach ($scores as $score) {
             $average += $score['score'];
             $count++;
          }
