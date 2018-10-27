@@ -35,7 +35,7 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $query = 'SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = :name';
 
 $stmt = $db->prepare($query);
-$stmt->bindValue(':name', $name, PDO::PARAM_INT);
+$stmt->bindValue(':name', $name, PDO::PARAM_VARCHAR);
 $stmt->execute();
 $scores = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -99,8 +99,8 @@ function findPic($pic) {
          $count = 0;
          //foreach ($db->query($qry2) as $score) {
          foreach ($scores as $score) {
-         $average += $score['score'];
-         $count++;
+            $average += $score['score'];
+            $count++;
          }
       $average = $average / $count; //find the average score
       findPic($name);
