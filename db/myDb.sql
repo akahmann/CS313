@@ -59,6 +59,7 @@ CREATE TABLE games
    , name VARCHAR(100) UNIQUE NOT NULL
    , developerId INT NOT NULL REFERENCES developers(id)
    , genreId INT NOT NULL REFERENCES genres(id)
+   , picLink VARCHAR(200) UNIQUE NOT NULL
 );
 
 CREATE TABLE reviews
@@ -119,13 +120,14 @@ INSERT INTO genres (name)
    , ('RPG')
    , ('Real-time Strategy');
 
-INSERT INTO games (name, developerId, genreId)
-   VALUES ('The Legend of Zelda: Ocarina of Time', 1, 1)
-   , ('Super Mario World', 1, 2)
-   , ('Paper Mario', 2, 3)
-   , ('Final Fantasy VII', 3, 3)
-   , ('Undertale', 4, 3)
-   , ('StarCraft 2', 5, 4);
+INSERT INTO games (name, developerId, genreId, picLink)
+   VALUES
+   ('The Legend of Zelda: Ocarina of Time', 1, 1, '/rottenPotatoes/games/oot.jpg')
+   , ('Super Mario World', 1, 2, '/rottenPotatoes/games/smw.jpg')
+   , ('Paper Mario', 2, 3, '/rottenPotatoes/games/pmario.jpg')
+   , ('Final Fantasy VII', 3, 3, '/rottenPotatoes/games/ff7.jpg')
+   , ('Undertale', 4, 3, '/rottenPotatoes/games/undertale.jpg')
+   , ('StarCraft 2', 5, 4, '/rottenPotatoes/games/sc2.jpg');
 
 INSERT INTO reviews (text, date, score, likes, userId, organizationId, gameId)
    VALUES ('This Zelda has enchanted our minds with whimsy and fantasy. The lush
@@ -213,5 +215,4 @@ INSERT INTO reviews (text, date, score, likes, userId, organizationId, gameId)
       StarCraft II presents a cast of new heroes and familiar faces in an edgy sci-fi story filled with adventure
       and intrigue.'
       , TO_DATE('17/07/2015', 'DD/MM/YYYY'), 95, 42, 5, NULL, 6);
---LET ME PUSH!!
 --FOREIGN KEY = REFERENCES users(id)

@@ -44,3 +44,17 @@ CREATE TABLE scripture_topic (
 
 CREATE USER ta_user WITH PASSWORD 'ta_pass';
 GRANT SELECT, INSERT, UPDATE ON scripture TO ta_user;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
