@@ -31,15 +31,6 @@ $stmt = $db->prepare($query);
 $stmt->execute();
 $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$name = $game['name'];
-
-$query = 'SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = :name';
-
-$stmt = $db->prepare($query);
-$stmt->bindValue(':name', $name, PDO::PARAM_STR);
-$stmt->execute();
-$scores = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 function findPic($pic) {
    if ($pic == "The Legend of Zelda: Ocarina of Time") {
       echo "<img class='selectGamePic'" .
@@ -100,6 +91,13 @@ function findPic($pic) {
          $count = 0;
          //foreach ($db->query($qry2) as $score) {
          foreach ($scores as $score) {
+
+            $query = 'SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = :name';
+            $stmt = $db->prepare($query);
+            $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+            $stmt->execute();
+            $scores = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
             $average += $score['score'];
             $count++;
          }
