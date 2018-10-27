@@ -9,12 +9,11 @@ $gameName = htmlspecialchars($_POST['gameName']);
 //From server
 $date = getdate();
 
-require('dbConnect.php');
-
 $insertStmt = 'INSERT INTO reviews (text, date, score, likes, userId, organizationId, gameId) VALUES (:text, "$date", :score, 0, 1, NULL, :gameId);'
 
+require('dbConnect.php');
 $db = get_db();
-$stmt = $db->prepare();
+$stmt = $db->prepare('$insertStmt');
 $stmt->bindValue(':text', $text, PDO::PARAM_STR);
 $stmt->bindValue(':score', $score, PDO::PARAM_INT);
 $stmt->bindValue(':gameId', $score, PDO::PARAM_INT);
