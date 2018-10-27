@@ -14,7 +14,7 @@ $insertStmt = 'INSERT INTO reviews (text, date, score, likes, userId, organizati
 require('connectRPDB.php');
 $db = get_db();
 $stmt = $db->prepare('$insertStmt');
-$stmt->bindValue(':text', $text, PDO::PARAM_STR);
+$stmt->bindValue(':text', $text, PDO::PARAM_LOB);
 $stmt->bindValue(':score', $score, PDO::PARAM_INT);
 $stmt->bindValue(':gameId', $score, PDO::PARAM_INT);
 $stmt->execute();
