@@ -72,18 +72,21 @@ foreach ($reviews as $review) {
 }
 
 ?>
+</div>
 
+<br><br>
+
+<div>
 <form method="post" action="insertReview.php">
   <input type="hidden" name="id" value="<?php echo $id; ?>">
   <input type="hidden" name="gameName" value="<?php echo $name; ?>">
-  <span>Put Review Here: </span>
+  <span>Put Review Here: </span> <br>
   <textarea name="text"></textarea>
   <br>
-  <span>Give Score Here: </span>
+  <span>Give Score Here: </span> <br>
   <input type="text" name="score">
   <input type="submit" value="Create Review">
 </form>
-
 </div>
 
 </body>
