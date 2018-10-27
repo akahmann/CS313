@@ -99,16 +99,17 @@ function findPic($pic) {
          $count = 0;
          //foreach ($db->query($qry2) as $score) {
          foreach ($scores as $score) {
+            echo $score['score'];
             $average += $score['score'];
             $count++;
          }
-      $average = $average / $count; //find the average score
-      findPic($name);
-      echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
-            . $game['id'] . "&name=" . $name . "'>" . $name . "</a>";
-      echo "<br>Average Score: $average";
-      //getScore($game);
-      echo "<br><br><br>";
+         $average = $average / $count; //find the average score
+         findPic($name);
+         echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
+               . $game['id'] . "&name=" . $name . "'>" . $name . "</a>";
+         echo "<br>Average Score: $average";
+         //getScore($game);
+         echo "<br><br><br>";
       }
 
       // $qry3 = "select gm.name AS gmname, gr.name AS grname, d.name AS dname" .
