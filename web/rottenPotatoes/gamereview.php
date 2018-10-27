@@ -76,7 +76,7 @@ foreach ($reviews as $review) {
 
 <br><br>
 
-<div>
+<div class="midbody">
 <form method="post" action="insertReview.php">
   <input type="hidden" name="id" value="<?php echo $id; ?>">
   <input type="hidden" name="gameName" value="<?php echo $name; ?>">
