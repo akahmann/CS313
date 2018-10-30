@@ -15,7 +15,7 @@ CREATE TABLE users
    , firstName VARCHAR(50) NOT NULL
    , lastName VARCHAR(50) NOT NULL
    , username VARCHAR(50) UNIQUE NOT NULL
-   , password VARCHAR(50) NOT NULL
+   , password VARCHAR(255) NOT NULL
    , critic BOOLEAN NOT NULL
 );
 
@@ -23,7 +23,7 @@ CREATE TABLE organizations
 (
    id SERIAL PRIMARY KEY
    , name VARCHAR(50) UNIQUE NOT NULL
-   , password VARCHAR(50) NOT NULL
+   , password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE reviewers
@@ -31,7 +31,7 @@ CREATE TABLE reviewers
    id SERIAL PRIMARY KEY
    , firstName VARCHAR(50) NOT NULL
    , lastName VARCHAR(50) NOT NULL
-   , password VARCHAR(50) NOT NULL
+   , password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE reviewerOrganizations
