@@ -2,8 +2,8 @@
 
 session_start();
 
-// require('connectRPDB.php');
-// $db = get_db();
+require('connectRPDB.php');
+$db = get_db();
 
 //From server
 $username = $_SESSION['username'];
@@ -27,8 +27,6 @@ $gameName = htmlspecialchars($_POST['gameName']);
 $insertStmt = 'INSERT INTO reviews (text, date, score, likes, userId, organizationId, gameId)' .
               'VALUES (:text, NULL, :score, 0, :userId, NULL, :gameId)';
 
-require('connectRPDB.php');
-$db = get_db();
 $stmt = $db->prepare($insertStmt);
 $stmt->bindValue(':text', $text, PDO::PARAM_STR);
 $stmt->bindValue(':score', $score, PDO::PARAM_INT);
