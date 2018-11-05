@@ -8,7 +8,7 @@ $validLogin = $_SESSION['validLogin'];
 require('connectRPDB.php');
 $db = get_db();
 
-$query = 'SELECT id, name, picLink FROM games';
+$query = 'SELECT id, name, piclink FROM games';
 
 $stmt = $db->prepare($query);
 $stmt->execute();
@@ -98,7 +98,8 @@ function findPic($pic) {
 
       foreach ($games as $game) {
          $name = $game['name'];
-         $picLink = $game['picLink'];
+         $picLink = $game['piclink'];
+         var_dump($game);
          $qry2 = "SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = '$name'";
          $average = 0;
          $count = 0;
