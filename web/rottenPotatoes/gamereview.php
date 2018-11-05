@@ -61,6 +61,16 @@ function findPic($pic) {
 
 <h1>Rotten Potatoes</h1>
 
+<?php
+
+if (isset($_SESSION['username'])) {
+    echo "<div class='midbody'>Welcome $username";
+    echo "<a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/logout.php'>";
+    echo "Logout</a></div>";
+  }
+
+?>
+
 <div class="midbody">
 <?php
 

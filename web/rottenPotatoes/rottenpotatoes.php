@@ -75,12 +75,15 @@ function findPic($pic) {
       Password: <input type="password" name="password"><br>
       <input type="submit" name="submit" value="login">
   </form>
+  <a href="https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/createAccount.php">Create Account</a>
 </div>
 
 <?php
   }
   else {
-    echo "<div class='midbody'>Welcome $username </div>";
+    echo "<div class='midbody'>Welcome $username";
+    echo "<a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/logout.php'>";
+    echo "Logout</a></div>";
   }
 
   if (isset($_SESSION['validLogin'])) {
