@@ -2,7 +2,8 @@
 
 session_start();
 
-$userId = $_SESSION['userID'];
+$username = $_SESSION['username'];
+$validLogin = $_SESSION['validLogin'];
 
 require('connectRPDB.php');
 $db = get_db();
@@ -64,13 +65,12 @@ function findPic($pic) {
 
 <?php
 
-  if (!isset($_SESSION['userId']))
-  {
+  if (!isset($_SESSION['username'])) {
 
 ?>
 
 <div class="midbody">
-  <form method="POST">
+  <form action="loginPotato.php" method="POST">
       Username: <input type="text" name="username"><br>
       Password: <input type="text" name="password"><br>
       <input type="submit" name="submit" value="login">
@@ -78,6 +78,11 @@ function findPic($pic) {
 </div>
 
 <?php
+  }
+
+  if (isset($_SESSION['validLogin'])) {
+    if ($_SESSION['validLogin'] == false)
+      echo "<div class='midbody'>Error Logging In</div>";
   }
 ?>
 
