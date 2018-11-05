@@ -28,6 +28,7 @@ if ($correctUser == true && $correctPassword == true) {
 }
 else {
    $_SESSION["validLogin"] = false;
+   header('location:rottenpotatoes.php');
 }
 
 die();
