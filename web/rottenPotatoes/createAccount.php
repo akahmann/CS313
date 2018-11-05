@@ -24,18 +24,20 @@ foreach ($users as $user) {
 
 if($inputUnique) {
    $query = "INSERT INTO users(firstName, lastName, username, password, critic)" .
-   "VALUES ('Bob', 'Frank', :newUsername, :newPassword, false);";
+   "VALUES ('Bob', 'Frank', :newUsername, :newPassword, 'false');";
    $stmt = $db->prepare($query);
    $stmt->bindValue(":newUsername", $newUsername, PDO::PARAM_STR);
    $stmt->bindValue(":newPassword", $newPassword, PDO::PARAM_STR);
    $stmt->execute();
 
    $_SESSION["validAccount"] = true;
+   $_SESSION["validLogin"] = true;
    header("location:rottenpotatoes.php");
 }
 else {
 
    $_SESSION["validAccount"] = false;
+   $_SESSION["validLogin"] = true;
    header("location:createAccountPage.php");
 }
 
