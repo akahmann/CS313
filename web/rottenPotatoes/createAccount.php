@@ -13,12 +13,11 @@ $newUsername = htmlspecialchars($newUsername);
 $newPassword = $_POST['newPassword'];
 $newPassword = htmlspecialchars($newPassword);
 
-//if (isset($_POST['critic'])) {
-if ($_POST['critic'] == 'criticChecked') {
-   $isChecked = true;
-}
-else {
-   $isChecked = false;
+$isChecked = 'false';
+
+if (isset($_POST['critic'])) {
+//if ($_POST['critic'] == 'criticChecked') {
+   $isChecked = 'true';
 }
 
 $query = "SELECT username FROM users";
