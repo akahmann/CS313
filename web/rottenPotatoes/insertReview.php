@@ -2,8 +2,8 @@
 
 session_start();
 
-require('connectRPDB.php');
-$db = get_db();
+// require('connectRPDB.php');
+// $db = get_db();
 
 //From server
 $username = $_SESSION['username'];
