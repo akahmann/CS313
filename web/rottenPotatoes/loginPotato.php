@@ -2,7 +2,7 @@
 
 session_start();
 
-require('dbConnect.php');
+require('connectRPDB.php');
 $db = get_db();
 $usernamePassed = $_POST['username'];
 $passwordPassed = $_POST['password'];

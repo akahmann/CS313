@@ -72,7 +72,7 @@ function findPic($pic) {
 <div class="midbody">
   <form action="loginPotato.php" method="POST">
       Username: <input type="text" name="username"><br>
-      Password: <input type="text" name="password"><br>
+      Password: <input type="password" name="password"><br>
       <input type="submit" name="submit" value="login">
   </form>
 </div>
