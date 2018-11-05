@@ -24,7 +24,7 @@ $db = get_db();
 
 Create Account
 
-<form action="loginPotato.php" method="POST">
+<form action="createAccount.php" method="POST">
       Username: <input type="text" name="newUsername"><br>
       Password: <input type="password" name="newPassword"><br>
       <input type="submit" name="submit" value="login">
