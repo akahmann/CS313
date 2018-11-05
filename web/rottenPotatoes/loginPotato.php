@@ -10,7 +10,7 @@ $usernamePassed = htmlspecialchars($usernamePassed);
 $stmt = $db->prepare("SELECT id, username, password FROM users;");
 $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// lets see if the user has a project
+
 $correctUser = false;
 $correctPassword = false;
 foreach ($users as $user) {

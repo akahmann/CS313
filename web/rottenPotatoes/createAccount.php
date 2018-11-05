@@ -1,31 +1,41 @@
 <?php
+session_start();
 
 require('connectRPDB.php');
 $db = get_db();
 
+$newUsername = $_POST['newUsername'];
+$newUsername = htmlspecialchars($newUsername);
+$newPassword = $_POST['newPassword'];
+$newPassword = htmlspecialchars($newPassword);
+
+$query = "SELECT username FROM users";
+$stmt = $db->prepare($query);
+$stmt->bindValue(":newUsername", $newUsername, PDO::PARAM_STR);
+$stmt->execute();
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$inputUnique = true;
+
+foreach ($users as $user) {
+   if ($user['username'] == $newUsername) {
+      $inputUnique = false;
+   }
+}
+
+if($inputUnique) {
+   $query = "INSERT INTO program_user(username, password) VALUES (:newUsername, :newPassword);";
+   $stmt = $db->prepare($query);
+   $stmt->bindValue(":newUsername", $newUsername, PDO::PARAM_STR);
+   $stmt->bindValue(":newPassword", $newPassword, PDO::PARAM_STR);
+   $stmt->execute();
+
+   $_SESSION["validAccount"] = true;
+   header("location:rottenpotatoes.php");
+}
+else {
+
+   $_SESSION["validAccount"] = false;
+   header("location:createAccountPage.php");
+}
+
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-   <meta charset="utf-8">
-   <link rel="stylesheet" type="text/css" href="rottenpotatoes.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Rotten Potatoes - Create Account</title>
-</head>
-<body>
-
-<h1>Rotten Potatoes</h1>
-
-<div class="midbody">
-
-<?php
-
-
-
-?>
-
-</div>
-
-</body>
-</html>
