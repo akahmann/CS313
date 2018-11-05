@@ -13,7 +13,8 @@ $newUsername = htmlspecialchars($newUsername);
 $newPassword = $_POST['newPassword'];
 $newPassword = htmlspecialchars($newPassword);
 
-if (isset($_POST['critic'])) {
+//if (isset($_POST['critic'])) {
+if ($_POST['critic'] == 'criticChecked')
    $isChecked = true;
 }
 else {
