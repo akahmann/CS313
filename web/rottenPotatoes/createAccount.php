@@ -1,6 +1,4 @@
 <?php
-session_start();
-$username = $_SESSION['username'];
 
 require('connectRPDB.php');
 $db = get_db();
@@ -78,13 +76,7 @@ foreach ($reviews as $review) {
 ?>
 </div>
 
-<br>
-
-<?php
-
-   if (isset($_SESSION['username'])) {
-
-?>
+<br><br>
 
 <div class="midbody">
 <form method="post" action="insertReview.php">
@@ -99,12 +91,6 @@ foreach ($reviews as $review) {
   <input type="submit" value="Create Review">
 </form>
 </div>
-
-<?php
-
-   }
-
-?>
 
 </body>
 </html>
