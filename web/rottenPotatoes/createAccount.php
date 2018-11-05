@@ -11,7 +11,6 @@ $newPassword = htmlspecialchars($newPassword);
 
 $query = "SELECT username FROM users";
 $stmt = $db->prepare($query);
-$stmt->bindValue(":newUsername", $newUsername, PDO::PARAM_STR);
 $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $inputUnique = true;
