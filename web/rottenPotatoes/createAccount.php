@@ -4,10 +4,20 @@ session_start();
 require('connectRPDB.php');
 $db = get_db();
 
+$newFirstname = $_POST['newFirstname'];
+$newLastname = htmlspecialchars($newLastname);
+$newPassword = $_POST['newPassword'];
+$newPassword = htmlspecialchars($newPassword);
 $newUsername = $_POST['newUsername'];
 $newUsername = htmlspecialchars($newUsername);
 $newPassword = $_POST['newPassword'];
 $newPassword = htmlspecialchars($newPassword);
+
+$isChecked = false;
+
+if (isset($_POST['critic'])) {
+   $isChecked = true;
+}
 
 $query = "SELECT username FROM users";
 $stmt = $db->prepare($query);
@@ -23,8 +33,10 @@ foreach ($users as $user) {
 
 if($inputUnique) {
    $query = "INSERT INTO users(firstName, lastName, username, password, critic)" .
-   "VALUES ('Bob', 'Frank', :newUsername, :newPassword, 'false');";
+   "VALUES (:newFirstname, :newLastname, :newUsername, :newPassword, '$isChecked');";
    $stmt = $db->prepare($query);
+   $stmt->bindValue(":newFirstname", $newFirstname, PDO::PARAM_STR);
+   $stmt->bindValue(":newLastname", $newLastname, PDO::PARAM_STR);
    $stmt->bindValue(":newUsername", $newUsername, PDO::PARAM_STR);
    $stmt->bindValue(":newPassword", $newPassword, PDO::PARAM_STR);
    $stmt->execute();

@@ -25,8 +25,11 @@ $db = get_db();
 Create Account
 
 <form action="createAccount.php" method="POST">
+      Firstname: <input type="text" name="newFirstname"><br>
+      Lastname: <input type="text" name="newLastname"><br>
       Username: <input type="text" name="newUsername"><br>
       Password: <input type="password" name="newPassword"><br>
+      Critic: <input type="checkbox" name="critic" value="critic"><br>
       <input type="submit" name="submit" value="login">
 </form>
 
