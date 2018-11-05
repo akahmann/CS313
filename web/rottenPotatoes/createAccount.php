@@ -23,7 +23,8 @@ foreach ($users as $user) {
 }
 
 if($inputUnique) {
-   $query = "INSERT INTO program_user(username, password) VALUES (:newUsername, :newPassword);";
+   $query = "INSERT INTO users(firstName, lastName, username, password, critic)" .
+   "VALUES ('Bob', 'Frank', :newUsername, :newPassword, false);";
    $stmt = $db->prepare($query);
    $stmt->bindValue(":newUsername", $newUsername, PDO::PARAM_STR);
    $stmt->bindValue(":newPassword", $newPassword, PDO::PARAM_STR);
