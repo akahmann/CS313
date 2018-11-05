@@ -80,7 +80,7 @@ function findPic($pic) {
 <?php
   }
   else {
-    echo "<div class='midbody'>Welcome $username </div>"
+    echo "<div class='midbody'>Welcome $username </div>";
   }
 
   if (isset($_SESSION['validLogin'])) {
