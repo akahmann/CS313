@@ -79,9 +79,9 @@ function findPic($pic) {
 
 <?php
   }
-  else {
-    echo "<div class='midbody'>\nWelcome $username \n</div>"
-  }
+  // else {
+  //   echo "<div class='midbody'>\nWelcome $username \n</div>"
+  // }
 
   if (isset($_SESSION['validLogin'])) {
     if ($_SESSION['validLogin'] == false)
