@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+$userId = $_SESSION['userID'];
+
 require('connectRPDB.php');
 $db = get_db();
 
@@ -56,6 +60,26 @@ function findPic($pic) {
 <body>
 
 <h1>Rotten Potatoes</h1>
+
+
+<?php
+
+  if (!isset($_SESSION['userId']))
+  {
+
+?>
+
+<div class="midbody">
+  <form method="POST">
+      Username: <input type="text" name="username"><br>
+      Password: <input type="text" name="password"><br>
+      <input type="submit" name="submit" value="login">
+  </form>
+</div>
+
+<?php
+  }
+?>
 
 <div class="midbody">
    <?php

@@ -57,6 +57,8 @@ function findPic($pic) {
 </head>
 <body>
 
+<h1>Rotten Potatoes</h1>
+
 <div class="midbody">
 <?php
 
