@@ -52,6 +52,7 @@ echo "<img class='selectGamePic' src='$picLink' alt='$name'>";
 echo "<br>";
 echo "$genre and $developer <br>";
 foreach ($reviews as $review) {
+   var_dump($review);
    echo $review['username'] . $review['orgname'] . "<br>";
    echo "<p>" . $review['text'] . "</p>";
    echo "Score Given: " . $review['score'] . "<br><br>";
