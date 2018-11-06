@@ -10,7 +10,7 @@ $db = get_db();
 
 <script type="text/javascript">
    function switch() {
-      if (document.getElementById("switch").innerHtml == "Switch to Organization") {
+      if (document.getElementById("switchBtn").innerHtml == "Switch to Organization") {
          document.getElementById("switch").innerHtml = "Switch to User";
          document.getElementById("formHere").innerHtml = "<form action='createOrgAccount.php' method='POST'>"
          "Organization Name: <input type='text' name='name'><br>" +
@@ -19,7 +19,7 @@ $db = get_db();
          "</form>";
       }
       else {
-         document.getElementById("switch").innerHtml = "Switch to Organization";
+         document.getElementById("switchBtn").innerHtml = "Switch to Organization";
          document.getElementById("formHere").innerHtml = "<form action='createUserAccount.php' method='POST'>"
          "Firstname: <input type='text' name='newFirstname'><br>" +
          "Lastname: <input type='text' name='newLastname'><br>" +
@@ -59,7 +59,7 @@ Create Account
 </form>
 </div>
 
-<button id="switch" onclick="switch()">Switch to Organization</button>
+<button id="switchBtn" onclick="switch()">Switch to Organization</button>
 
 <a href="https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/rottenpotatoes.php">Home</a>
 
