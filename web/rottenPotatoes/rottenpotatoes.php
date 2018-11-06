@@ -83,7 +83,7 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
          // echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
          //       . $game['id'] . "&name=" . $name . "&picLink=" . $picLink . "&genre=" . $genre .
          //       "&developer=" . $developer . "'>" . $name . "</a>";
-         echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
+         echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id=" .
               "$id&name=$name&picLink=$picLink&genre=$genre&developer=$developer'>$name</a>";
          echo "<br>Average Score: $average";
          echo "<br><br><br>";
