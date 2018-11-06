@@ -64,6 +64,8 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
    <?php
       foreach ($games as $game) {
          $name = $game['gmname'];
+         $genre = $game['grname'];
+         $developer = $game['dname'];
          $picLink = $game['piclink'];
          $qry2 = "SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = '$name'";
          $average = 0;
@@ -76,9 +78,10 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
          $average = round($average, 2);
 
          echo "<img class='selectGamePic' src='$picLink' alt='$name'>";
-         echo $game['grname'] . " and " . $game['dname'] . "<br>";
+         echo "$genre and $developer <br>";
          echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
-               . $game['id'] . "&name=" . $name . "&picLink=" . $picLink . "'>" . $name . "</a>";
+               . $game['id'] . "&name=" . $name . "&picLink=" . $picLink . "&genre=" . $genre .
+               "&developer=" . $developer . "'>" . $name . "</a>";
          echo "<br>Average Score: $average";
          echo "<br><br><br>";
       }

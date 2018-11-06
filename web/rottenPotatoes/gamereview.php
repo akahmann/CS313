@@ -8,10 +8,20 @@ $db = get_db();
 $id = htmlspecialchars($_GET['id']);
 $name = htmlspecialchars($_GET['name']);
 $picLink = htmlspecialchars($_GET['picLink']);
+$genre = htmlspecialchars($_GET['genre']);
+$develper = htmlspecialchars($_GET['developer']);
 
 //$query = 'SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name';
 $query = 'SELECT text, score, u.username AS username, g.name, u.id FROM reviews JOIN games g ON' .
          ' gameId = g.id JOIN users u ON userId = u.id WHERE g.name= :name';
+// $query = 'SELECT text, score, u.username AS username, gm.name, u.id, ' .
+//          'gr.name AS grname, d.name AS dname' .
+//          'FROM reviews' .
+//          'JOIN games gm ON gameId = gm.id' .
+//          'JOIN genres gr ON gm.genreId = gr.id' .
+//          'JOIN developers d ON gm.developerId = d.id' .
+//          'JOIN users u ON userId = u.id' .
+//          'WHERE gm.name= :name';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->execute();
@@ -47,6 +57,7 @@ if (isset($_SESSION['username'])) {
 
 echo "<img class='selectGamePic' src='$picLink' alt='$name'>";
 echo "<br>";
+echo "$genre and $developer <br>";
 // $qry = "SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name";
 // $db->prepare($qry);
 // $db->bindValue(":name", $name, PDO::PARAM_STR);

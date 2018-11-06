@@ -255,3 +255,17 @@ FULL OUTER JOIN organizations o ON r.organizationId = o.id
 FULL OUTER JOIN reviewerOrganizations ro ON o.id = ro.organizationId
 FULL OUTER JOIN reviewers rs ON ro.reviewerId = rs.id
 WHERE g.name= 'The Legend of Zelda: Ocarina of Time';
+
+SELECT text, score, u.username AS username, gm.name, u.id,
+       gr.name AS grname, d.name AS dname
+FROM reviews
+JOIN games gm ON gameId = gm.id
+JOIN genres gr ON gm.genreId = gr.id
+JOIN developers d ON gm.developerId = d.id
+JOIN users u ON userId = u.id
+WHERE gm.name= 'The Legend of Zelda: Ocarina of Time';
+
+SELECT gm.name AS gmname, gr.name AS grname, d.name AS dname
+FROM genres gr
+JOIN games gm ON gr.id = gm.genreId
+JOIN developers d ON gm.developerId = d.id;
