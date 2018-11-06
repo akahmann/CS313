@@ -34,11 +34,11 @@ $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
 
 if (isset($_SESSION['username'])) {
-    echo "<div class='midbody'>Welcome $username";
-    echo "<a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/logout.php'>";
-    echo "Logout</a><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/rottenpotatoes.php'>";
-    echo "Home</a></div>";
-  }
+   echo "<div class='midbody'>Welcome $username";
+   echo "<a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/logout.php'>";
+   echo "Logout</a><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/rottenpotatoes.php'>";
+   echo "Home</a></div>";
+}
 
 ?>
 
@@ -52,8 +52,9 @@ echo "<br>";
 // $db->bindValue(":name", $name, PDO::PARAM_STR);
 //       foreach ($db->query($qry) as $review) {
 foreach ($reviews as $review) {
-  echo "<p>" . $review['text'] . "</p>";
-  echo "Score Given: " . $review['score'] . "<br><br>";
+   echo $review['username'] . "<br>";
+   echo "<p>" . $review['text'] . "</p>";
+   echo "Score Given: " . $review['score'] . "<br><br>";
 }
 
 ?>
