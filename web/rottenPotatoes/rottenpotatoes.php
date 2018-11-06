@@ -63,6 +63,7 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="midbody">
    <?php
       foreach ($games as $game) {
+         $id = $game['id'];
          $name = $game['gmname'];
          $genre = $game['grname'];
          $developer = $game['dname'];
@@ -79,9 +80,11 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
          echo "<img class='selectGamePic' src='$picLink' alt='$name'>";
          echo "$genre and $developer <br>";
+         // echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
+         //       . $game['id'] . "&name=" . $name . "&picLink=" . $picLink . "&genre=" . $genre .
+         //       "&developer=" . $developer . "'>" . $name . "</a>";
          echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
-               . $game['id'] . "&name=" . $name . "&picLink=" . $picLink . "&genre=" . $genre .
-               "&developer=" . $developer . "'>" . $name . "</a>";
+              "$id&name=$name&picLink=$picLink&genre=$genre&developer=$developer'>$name</a>";
          echo "<br>Average Score: $average";
          echo "<br><br><br>";
       }

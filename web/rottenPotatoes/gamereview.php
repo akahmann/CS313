@@ -83,6 +83,9 @@ foreach ($reviews as $review) {
 <form method="post" action="insertReview.php">
   <input type="hidden" name="id" value="<?php echo $id; ?>">
   <input type="hidden" name="gameName" value="<?php echo $name; ?>">
+  <input type="hidden" name="picLink" value="<?php echo $picLink; ?>">
+  <input type="hidden" name="genre" value="<?php echo $genre; ?>">
+  <input type="hidden" name="developer" value="<?php echo $developer; ?>">
   <span>Put Review Here: </span> <br>
   <textarea name="text"></textarea>
   <br>

@@ -21,6 +21,9 @@ $text = htmlspecialchars($_POST['text']);
 $score = htmlspecialchars($_POST['score']);
 $gameId = htmlspecialchars($_POST['id']);
 $gameName = htmlspecialchars($_POST['gameName']);
+$picLink = htmlspecialchars($_POST['picLink']);
+$genre = htmlspecialchars($_POST['genre']);
+$developer = htmlspecialchars($_POST['developer']);
 
 //From server
 
@@ -33,7 +36,9 @@ $stmt->bindValue(':score', $score, PDO::PARAM_INT);
 $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
 $stmt->bindValue(':gameId', $gameId, PDO::PARAM_INT);
 $stmt->execute();
-$new_page = "https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id=$gameId&name=$gameName";
+$new_page = "https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id=$gameId&name=$gameName" .
+            "&picLink=$picLink&genre=$genre&developer=$developer";
+
 header("Location: $new_page");
 die();
 
