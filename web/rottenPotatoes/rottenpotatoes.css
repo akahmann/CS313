@@ -50,7 +50,7 @@ h1 {
 }
 
 input[type=text], select {
-    width: 100%;
+    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -60,7 +60,7 @@ input[type=text], select {
 }
 
 input[type=password], select {
-    width: 100%;
+    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -71,8 +71,9 @@ input[type=password], select {
 
 input[type=submit] {
     width: 25%;
-    background-color: #4CAF50;
-    color: white;
+    background-color: rgb(255, 238, 158);
+    border: 2px solid rgb(61, 51, 7);
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -81,5 +82,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: rgb(61, 51, 7);
+    border: 2px solid rgb(255, 238, 158);
+    color: white;
 }
