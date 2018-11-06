@@ -8,6 +8,30 @@ $db = get_db();
 
 ?>
 
+<script type="text/javascript">
+   function switch() {
+      if (document.getElementById("switch").innerHtml == "Switch to Organization") {
+         document.getElementById("switch").innerHtml = "Switch to User";
+         document.getElementById("formHere").innerHtml = "<form action='createOrgAccount.php' method='POST'>"
+         "Organization Name: <input type='text' name='name'><br>" +
+         "Password: <input type='password' name='newPassword'><br>" +
+         "<input type='submit' name='submit' value='Create Account'>" +
+         "</form>";
+      }
+      else {
+         document.getElementById("switch").innerHtml = "Switch to Organization";
+         document.getElementById("formHere").innerHtml = "<form action='createUserAccount.php' method='POST'>"
+         "Firstname: <input type='text' name='newFirstname'><br>" +
+         "Lastname: <input type='text' name='newLastname'><br>" +
+         "Username: <input type='text' name='newUsername'><br>" +
+         "Password: <input type='password' name='newPassword'><br>" +
+         "Critic: <input type='checkbox' name='critic' value='criticChecked'><br>" +
+         "<input type='submit' name='submit' value='Create Account'>" +
+         "</form>";
+      }
+   }
+</script>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,14 +48,19 @@ $db = get_db();
 
 Create Account
 
-<form action="createAccount.php" method="POST">
+<div id="formHere">
+</div>
+
+<!-- <form action="createAccount.php" method="POST">
       Firstname: <input type="text" name="newFirstname"><br>
       Lastname: <input type="text" name="newLastname"><br>
       Username: <input type="text" name="newUsername"><br>
       Password: <input type="password" name="newPassword"><br>
       Critic: <input type="checkbox" name="critic" value="criticChecked"><br>
       <input type="submit" name="submit" value="login">
-</form>
+</form> -->
+
+<button id="switch" onclick="switch()">Switch to Organization</button>
 
 <a href="https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/rottenpotatoes.php">Home</a>
 
