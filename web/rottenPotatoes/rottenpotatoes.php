@@ -1,5 +1,5 @@
 <?php
-
+//var_dump($game);
 session_start();
 
 $username = $_SESSION['username'];
@@ -66,7 +66,6 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach ($games as $game) {
          $name = $game['name'];
          $picLink = $game['piclink'];
-         //var_dump($game);
          $qry2 = "SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = '$name'";
          $average = 0;
          $count = 0;

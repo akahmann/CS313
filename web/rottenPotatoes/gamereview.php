@@ -9,8 +9,9 @@ $id = htmlspecialchars($_GET['id']);
 $name = htmlspecialchars($_GET['name']);
 $picLink = htmlspecialchars($_GET['picLink']);
 
-$query = 'SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name';
-
+//$query = 'SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name';
+$query = 'SELECT text, score, u.username AS username, g.name, u.id FROM reviews JOIN games g ON' .
+         'gameId = g.id JOIN users u ON userId = u.id WHERE g.name= :name';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->execute();

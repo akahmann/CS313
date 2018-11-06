@@ -220,3 +220,5 @@ INSERT INTO reviews (text, date, score, likes, userId, organizationId, gameId)
 --A nostalgia trip that was revolutionary for its time, Ocarina of Time has not aged well. The 3DS port, with its slightly improved models, looks somewhat better than the other releases (a smaller screen size helps the illusion of increased graphical quality) but the audio remains true to the original source, and a lot of it just doesn't sound as fantastic these days. Nevertheless, Ocarina of Time remains one of those games everyone who considers themselves a gamer should try. It was once a masterwork of innovation that still provides interesting insights into the game design considerations of its heyday.
 
 --Score Given: 70
+
+SELECT text, score, u.username AS username, g.name, u.id FROM reviews JOIN games g ON gameId = g.id JOIN users u ON userId = u.id WHERE g.name= 'Undertale';
