@@ -13,8 +13,8 @@ $developer = htmlspecialchars($_GET['developer']);
 
 $query = 'SELECT text, score, u.username AS username, g.name, u.id ' .
          'FROM reviews ' .
-         'JOIN games g ON gameid = g.id ' .
-         'JOIN users u ON userid = u.id ' .
+         'FULL OUTER JOIN games g ON gameid = g.id ' .
+         'FULL OUTER JOIN users u ON userid = u.id ' .
          'WHERE g.name= :name';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
@@ -40,7 +40,7 @@ $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
 if (isset($_SESSION['username'])) {
    echo "<div class='midbody'>Welcome $username<br>";
    echo "<a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/logout.php'>";
-   echo "Logout</a> <a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/rottenpotatoes.php'>";
+   echo "Logout</a>    <a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/rottenpotatoes.php'>";
    echo "Home</a></div>";
 }
 
