@@ -26,6 +26,7 @@ foreach ($users as $user) {
 if ($correctUser == true && $correctPassword == true) {
    $_SESSION["username"] = $usernamePassed;
    $_SESSION["validLogin"] = true;
+   $_SESSION['userId'] = $user['id'];
    header('location:rottenpotatoes.php');
 }
 else {

@@ -7,18 +7,18 @@ $db = get_db();
 
 //From server
 $username = $_SESSION['username'];
+$userId = $_SESSION['userId']
 //$date = getdate();
 
-//Find userId
-$usernamePassed = htmlspecialchars($usernamePassed);
-$stmt = $db->prepare("SELECT id FROM users WHERE username = '$username';");
-$stmt->execute();
-$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-foreach ($users as $user) {
-   $userId = $user['userId'];
-}
+// $stmt = $db->prepare("SELECT id FROM users WHERE username = '$username';");
+// $stmt->execute();
+// $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// foreach ($users as $user) {
+//    $userId = $user['userId'];
+// }
 
 //From client
+$usernamePassed = htmlspecialchars($usernamePassed);
 $text = htmlspecialchars($_POST['text']);
 $score = htmlspecialchars($_POST['score']);
 $gameId = htmlspecialchars($_POST['id']);

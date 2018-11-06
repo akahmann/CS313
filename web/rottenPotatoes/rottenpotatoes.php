@@ -3,6 +3,7 @@
 session_start();
 
 $username = $_SESSION['username'];
+$userId = $_SESSION['userId'];
 $validLogin = $_SESSION['validLogin'];
 
 require('connectRPDB.php');
