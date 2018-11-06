@@ -100,9 +100,14 @@ INSERT INTO users (firstName, lastName, username, password, critic, picLink)
    , ('Scott', 'Burton', 'Nick Fury', '$2y$10$Qf7lQj05PeF3gfmsBE72y.qrOpOwAUPGwuOc3mYCjnblDf4PA', 'true', '/rottenPotatoes/users/nickfury.jpg');
 
 INSERT INTO organizations (name, password, picLink)
-   VALUES ('IGN', 'toomuchwater', '/rottenPotatoes/games/oot.jpg')
-   , ('Metacritic', 'over9000')
-   , ('Gamespot', 'poweroverwhelming');
+   VALUES ('IGN', 'toomuchwater', '/rottenPotatoes/organizations/ign.jpg')
+   , ('Metacritic', 'over9000', '/rottenPotatoes/organizations/mcritic.jpg')
+   , ('Gamespot', 'poweroverwhelming', '/rottenPotatoes/organizations/gamespot.jpg');
+
+INSERT INTO organizations (name, password, picLink)
+VALUES ('IGN', '$2y$10$bo6wal4UsgtIwM0BqSl9zeOwnTaSo25xkROQ5bOawruhSMnLpu5ny', '/rottenPotatoes/organizations/ign.jpg')
+   , ('Metacritic', '$2y$10$2IlhurepKnAnO4orwYyeee089GAgglqQ3OJ6DPP9k8WPUEzM457h6', '/rottenPotatoes/organizations/mcritic.jpg')
+   , ('Gamespot', '$2y$10$8LUKrwJioYg6Hbzfkdwny.IqOi67x2.hzpnvwtRZ6Be.NTs87h9pO', '/rottenPotatoes/organizations/gamespot.jpg');
 
 INSERT INTO reviewers (firstName, lastName, password)
    VALUES ('Bob', 'Pickles', 'ignman')
