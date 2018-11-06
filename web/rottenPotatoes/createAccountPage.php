@@ -49,16 +49,15 @@ $db = get_db();
 Create Account
 
 <div id="formHere">
-</div>
-
-<!-- <form action="createAccount.php" method="POST">
+   <form action="createAccount.php" method="POST">
       Firstname: <input type="text" name="newFirstname"><br>
       Lastname: <input type="text" name="newLastname"><br>
       Username: <input type="text" name="newUsername"><br>
       Password: <input type="password" name="newPassword"><br>
       Critic: <input type="checkbox" name="critic" value="criticChecked"><br>
       <input type="submit" name="submit" value="login">
-</form> -->
+</form>
+</div>
 
 <button id="switch" onclick="switch()">Switch to Organization</button>
 
