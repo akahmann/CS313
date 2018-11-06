@@ -26,10 +26,10 @@ Create Account
 
 <div id="formHere">
    <form action="createAccount.php" method="POST">
-      Firstname: <input type="text" name="newFirstname" placeholder="Your name.."><br>
-      Lastname: <input type="text" name="newLastname" placeholder="Your last name.."><br>
-      Username: <input type="text" name="newUsername" placeholder="Your username.."><br>
-      Password: <input type="password" name="newPassword"><br>
+      Firstname: <br> <input type="text" name="newFirstname" placeholder="Your name.."><br>
+      Lastname: <br> <input type="text" name="newLastname" placeholder="Your last name.."><br>
+      Username: <br> <input type="text" name="newUsername" placeholder="Your username.."><br>
+      Password: <br> <input type="password" name="newPassword"><br>
       Critic: <input type="checkbox" name="critic" value="criticChecked"><br>
       <input type="submit" name="submit" value="Create Account" class="btn">
 </form>
