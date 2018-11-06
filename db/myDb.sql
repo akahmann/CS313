@@ -1,12 +1,13 @@
 --Drops are here so you can highlight everything and update tables all
 --at once
+DROP TABLE reviewerOrganizations;
+DROP TABLE reviewers;
+DROP TABLE organizations;
+
 DROP TABLE reviews;
 DROP TABLE games;
 DROP TABLE genres;
 DROP TABLE developers;
-DROP TABLE reviewerOrganizations;
-DROP TABLE reviewers;
-DROP TABLE organizations;
 DROP TABLE users;
 
 CREATE TABLE users
@@ -17,7 +18,7 @@ CREATE TABLE users
    , username VARCHAR(50) UNIQUE NOT NULL
    , password VARCHAR(255) NOT NULL
    , critic BOOLEAN NOT NULL
-   , picLink VARCHAR(200) UNIQUE NOT NULL
+   , picLink VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE organizations
@@ -60,7 +61,7 @@ CREATE TABLE games
    , name VARCHAR(100) UNIQUE NOT NULL
    , developerId INT NOT NULL REFERENCES developers(id)
    , genreId INT NOT NULL REFERENCES genres(id)
-   , picLink VARCHAR(200) UNIQUE NOT NULL
+   , picLink VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE reviews

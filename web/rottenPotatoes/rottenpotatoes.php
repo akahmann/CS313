@@ -8,7 +8,6 @@ $validLogin = $_SESSION['validLogin'];
 require('connectRPDB.php');
 $db = get_db();
 
-//$query = 'SELECT id, name, piclink FROM games';
 $query = 'SELECT gm.name AS gmname, gr.name AS grname, d.name AS dname, ' .
          ' gm.id AS id, gm.piclink AS piclink FROM genres gr ' .
          'JOIN games gm ON gr.id = gm.genreid ' .
@@ -80,9 +79,6 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
          echo "<img class='selectGamePic' src='$picLink' alt='$name'>";
          echo "$genre and $developer <br>";
-         // echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
-         //       . $game['id'] . "&name=" . $name . "&picLink=" . $picLink . "&genre=" . $genre .
-         //       "&developer=" . $developer . "'>" . $name . "</a>";
          echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id=" .
               "$id&name=$name&picLink=$picLink&genre=$genre&developer=$developer'>$name</a>";
          echo "<br>Average Score: $average";

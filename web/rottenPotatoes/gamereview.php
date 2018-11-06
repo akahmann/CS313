@@ -12,11 +12,10 @@ $genre = htmlspecialchars($_GET['genre']);
 $developer = htmlspecialchars($_GET['developer']);
 
 //$query = 'SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name';
-$query = 'SELECT text, score, u.username AS username, o.name AS orgname, g.name, u.id ' .
+$query = 'SELECT text, score, u.username AS username, g.name, u.id ' .
          'FROM reviews ' .
          'FULL OUTER JOIN games g ON gameid = g.id ' .
          'FULL OUTER JOIN users u ON userid = u.id ' .
-         'FULL OUTER JOIN organizations o ON organizationid = o.id ' .
          'WHERE g.name= :name';
 // $query = 'SELECT text, score, u.username AS username, gm.name, u.id, ' .
 //          'gr.name AS grname, d.name AS dname' .
