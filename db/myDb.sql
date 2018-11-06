@@ -248,10 +248,10 @@ INSERT INTO reviews (text, date, score, likes, userId, gameId)
 
 SELECT text, score, u.username AS username, g.name, u.id
 FROM reviews
-JOIN games g ON gameId = g.id
-JOIN users u ON userId = u.id
+FULL OUTER JOIN games g ON gameId = g.id
+FULL OUTER JOIN users u ON userId = u.id
 
-WHERE g.name= 'Undertale';
+WHERE g.name= 'The Legend of Zelda: Ocarina of Time';
 
 SELECT r.text AS text, r.score AS score,
 u.username AS username, o.name AS organizationName,

@@ -14,7 +14,9 @@ $usernamePassed = htmlspecialchars($usernamePassed);
 $stmt = $db->prepare("SELECT id FROM users WHERE username = '$username';");
 $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$userId = $users['userId'];
+foreach ($users as $user) {
+   $userId = $user['userId'];
+}
 
 //From client
 $text = htmlspecialchars($_POST['text']);
