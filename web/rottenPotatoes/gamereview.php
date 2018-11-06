@@ -49,8 +49,7 @@ if (isset($_SESSION['username'])) {
 <div class="midbody">
 <?php
 echo "<img class='selectGamePic' src='$picLink' alt='$name'>";
-echo "<br>";
-echo "$genre and $developer <br>";
+echo "$genre and $developer <br><br>";
 foreach ($reviews as $review) {
    echo $review['username'] . $review['orgname'] . "<br>";
    echo "<p>" . $review['text'] . "</p>";
