@@ -13,8 +13,8 @@ $developer = htmlspecialchars($_GET['developer']);
 
 $query = 'SELECT text, score, u.username AS username, g.name, u.id ' .
          'FROM reviews ' .
-         'FULL OUTER JOIN games g ON gameid = g.id ' .
-         'FULL OUTER JOIN users u ON userid = u.id ' .
+         'JOIN games g ON gameid = g.id ' .
+         'JOIN users u ON userid = u.id ' .
          'WHERE g.name= :name';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
@@ -52,7 +52,6 @@ echo "<img class='selectGamePic' src='$picLink' alt='$name'>";
 echo "<br>";
 echo "$genre and $developer <br>";
 foreach ($reviews as $review) {
-   var_dump($review);
    echo $review['username'] . $review['orgname'] . "<br>";
    echo "<p>" . $review['text'] . "</p>";
    echo "Score Given: " . $review['score'] . "<br><br>";
