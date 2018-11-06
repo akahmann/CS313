@@ -34,8 +34,8 @@ foreach ($users as $user) {
 
 if($inputUnique) {
    $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-   $query = "INSERT INTO users(firstName, lastName, username, password, critic)" .
-   "VALUES (:newFirstname, :newLastname, :newUsername, :newPassword, '$isChecked');";
+   $query = "INSERT INTO users(firstName, lastName, username, password, critic, piclink)" .
+   "VALUES (:newFirstname, :newLastname, :newUsername, :newPassword, '$isChecked', '/rottenPotatoes/users/batman.jpg');";
    $stmt = $db->prepare($query);
    $stmt->bindValue(":newFirstname", $newFirstname, PDO::PARAM_STR);
    $stmt->bindValue(":newLastname", $newLastname, PDO::PARAM_STR);
