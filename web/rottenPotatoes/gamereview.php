@@ -11,20 +11,11 @@ $picLink = htmlspecialchars($_GET['picLink']);
 $genre = htmlspecialchars($_GET['genre']);
 $developer = htmlspecialchars($_GET['developer']);
 
-//$query = 'SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name';
 $query = 'SELECT text, score, u.username AS username, g.name, u.id ' .
          'FROM reviews ' .
          'FULL OUTER JOIN games g ON gameid = g.id ' .
          'FULL OUTER JOIN users u ON userid = u.id ' .
          'WHERE g.name= :name';
-// $query = 'SELECT text, score, u.username AS username, gm.name, u.id, ' .
-//          'gr.name AS grname, d.name AS dname' .
-//          'FROM reviews' .
-//          'JOIN games gm ON gameId = gm.id' .
-//          'JOIN genres gr ON gm.genreId = gr.id' .
-//          'JOIN developers d ON gm.developerId = d.id' .
-//          'JOIN users u ON userId = u.id' .
-//          'WHERE gm.name= :name';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->execute();
@@ -57,31 +48,22 @@ if (isset($_SESSION['username'])) {
 
 <div class="midbody">
 <?php
-
 echo "<img class='selectGamePic' src='$picLink' alt='$name'>";
 echo "<br>";
 echo "$genre and $developer <br>";
-// $qry = "SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name";
-// $db->prepare($qry);
-// $db->bindValue(":name", $name, PDO::PARAM_STR);
-//       foreach ($db->query($qry) as $review) {
 foreach ($reviews as $review) {
    echo $review['username'] . $review['orgname'] . "<br>";
    echo "<p>" . $review['text'] . "</p>";
    echo "Score Given: " . $review['score'] . "<br><br>";
 }
-
 ?>
 </div>
 
 <br>
 
 <?php
-
    if (isset($_SESSION['username'])) {
-
 ?>
-
 <div class="midbody">
 <form method="post" action="insertReview.php">
   <input type="hidden" name="id" value="<?php echo $id; ?>">
@@ -90,7 +72,7 @@ foreach ($reviews as $review) {
   <input type="hidden" name="genre" value="<?php echo $genre; ?>">
   <input type="hidden" name="developer" value="<?php echo $developer; ?>">
   <span>Put Review Here: </span> <br>
-  <textarea name="text"></textarea>
+  <textarea name="text" rows="6" cols="80"></textarea>
   <br>
   <span>Give Score Here: </span> <br>
   <input type="text" name="score">
@@ -98,11 +80,8 @@ foreach ($reviews as $review) {
   <input type="submit" value="Create Review">
 </form>
 </div>
-
 <?php
-
    }
-
 ?>
 
 </body>

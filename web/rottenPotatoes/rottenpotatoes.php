@@ -40,7 +40,7 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <form action="loginPotato.php" method="POST">
       Username: <input type="text" name="username"><br>
       Password: <input type="password" name="password"><br>
-      <input type="submit" name="submit" value="login">
+      <input type="submit" name="submit" value="Login">
   </form>
   <a href="https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/createAccountPage.php">Create Account</a>
 </div>
