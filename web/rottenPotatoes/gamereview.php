@@ -38,10 +38,10 @@ $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
 
 if (isset($_SESSION['username'])) {
-   echo "<div class='midbody'>Welcome $username";
+   echo "<div class='midbody'>Welcome $username<br>";
    echo "<a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/logout.php'>";
-   echo "Logout</a><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/rottenpotatoes.php'>";
-   echo "Home</a></div>";
+   echo "Logout </a><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/rottenpotatoes.php'>";
+   echo " Home</a></div>";
 }
 
 ?>

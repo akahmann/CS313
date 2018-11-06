@@ -22,7 +22,7 @@ $db = get_db();
 
 <div class="midbody">
 
-Create Account
+Create Account <br>
 
 <div id="formHere">
    <form action="createAccount.php" method="POST">
