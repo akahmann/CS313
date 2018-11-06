@@ -77,7 +77,7 @@ foreach ($reviews as $review) {
   <span>Give Score Here: </span> <br>
   <input type="text" name="score">
   <br>
-  <input type="submit" value="Create Review">
+  <input type="submit" value="Create Review" class="btn">
 </form>
 </div>
 <?php

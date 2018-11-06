@@ -29,3 +29,22 @@ h1 {
    margin-right: auto;
    display: block;
 }
+
+.btn {
+  background-color: rgb(226, 199, 104);
+  color: rgb(22, 19, 8);
+  border: 5px solid #161308; /*dark brown*/
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  font-family: Bradley Hand, cursive;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(22, 19, 8);
+  color: rgb(226, 199, 104);
+}

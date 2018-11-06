@@ -31,7 +31,7 @@ Create Account
       Username: <input type="text" name="newUsername"><br>
       Password: <input type="password" name="newPassword"><br>
       Critic: <input type="checkbox" name="critic" value="criticChecked"><br>
-      <input type="submit" name="submit" value="Create Account">
+      <input type="submit" name="submit" value="Create Account" class="btn">
 </form>
 </div>
 
