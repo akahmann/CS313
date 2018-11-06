@@ -17,7 +17,7 @@ foreach ($users as $user) {
    if ($user['username'] == $usernamePassed) {
       $correctUser = true;
       $hashedPassword = $user['password'];
-      if(password_verify($passwordPassed, $databasePassword)) {
+      if(password_verify($passwordPassed, $hashedPassword)) {
       //if($user['password'] == $passwordPassed) {
          $correctPassword = true;
       }
