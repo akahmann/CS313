@@ -7,7 +7,7 @@ $db = get_db();
 
 //From server
 $username = $_SESSION['username'];
-$userId = $_SESSION['userId']
+$userId = $_SESSION['userId'];
 //$date = getdate();
 
 // $stmt = $db->prepare("SELECT id FROM users WHERE username = '$username';");
