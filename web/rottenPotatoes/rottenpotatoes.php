@@ -76,7 +76,7 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
          $average = round($average, 2);
 
          echo "<img class='selectGamePic' src='$picLink' alt='$name'>";
-         echo $game['grname'] . " and " . $game['dmname'] . "<br>";
+         echo $game['grname'] . " and " . $game['dname'] . "<br>";
          echo "<br><a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/gamereview.php?id="
                . $game['id'] . "&name=" . $name . "&picLink=" . $picLink . "'>" . $name . "</a>";
          echo "<br>Average Score: $average";
