@@ -9,7 +9,7 @@ $id = htmlspecialchars($_GET['id']);
 $name = htmlspecialchars($_GET['name']);
 $picLink = htmlspecialchars($_GET['picLink']);
 $genre = htmlspecialchars($_GET['genre']);
-$develper = htmlspecialchars($_GET['developer']);
+$developer = htmlspecialchars($_GET['developer']);
 
 //$query = 'SELECT text, score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name=:name';
 $query = 'SELECT text, score, u.username AS username, g.name, u.id FROM reviews JOIN games g ON' .
