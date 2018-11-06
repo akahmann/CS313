@@ -49,16 +49,14 @@ if (isset($_SESSION['username'])) {
 <div class="midbody">
 <?php
 echo "<img class='selectGamePic' src='$picLink' alt='$name'>";
-echo "$genre and $developer <br><br>";
+echo "$genre and $developer <br><br><br>";
 foreach ($reviews as $review) {
    echo $review['username'] . $review['orgname'] . "<br>";
    echo "<p>" . $review['text'] . "</p>";
-   echo "Score Given: " . $review['score'] . "<br><br>";
+   echo "Score Given: " . $review['score'] . "<br><br><br>";
 }
 ?>
 </div>
-
-<br>
 
 <?php
    if (isset($_SESSION['username'])) {
