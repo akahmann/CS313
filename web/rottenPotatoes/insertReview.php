@@ -27,8 +27,8 @@ $developer = htmlspecialchars($_POST['developer']);
 
 //From server
 
-$insertStmt = 'INSERT INTO reviews (text, date, score, likes, userId, organizationId, gameId)' .
-              'VALUES (:text, NULL, :score, 0, :userId, NULL, :gameId)';
+$insertStmt = 'INSERT INTO reviews (text, date, score, likes, userId, gameId)' .
+              'VALUES (:text, NULL, :score, 0, :userId, :gameId)';
 
 $stmt = $db->prepare($insertStmt);
 $stmt->bindValue(':text', $text, PDO::PARAM_STR);
