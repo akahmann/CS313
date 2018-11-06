@@ -30,25 +30,6 @@ h1 {
    display: block;
 }
 
-.btn {
-  background-color: rgb(226, 199, 104);
-  color: rgb(22, 19, 8);
-  border: 5px solid #161308; /*dark brown*/
-  border-radius: 12px;
-  padding: 10px;
-  text-align: center;
-  font-family: Bradley Hand, cursive;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: rgb(22, 19, 8);
-  color: rgb(226, 199, 104);
-}
-
 input[type=text], select {
     width: 50%;
     padding: 12px 20px;
@@ -72,7 +53,7 @@ input[type=password], select {
 input[type=submit] {
     width: 25%;
     background-color: rgb(255, 238, 158);
-    border: 2px solid rgb(61, 51, 7);
+    border: 3px solid #3d3307;
     color: black;
     padding: 14px 20px;
     margin: 8px 0;
@@ -83,6 +64,6 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: rgb(61, 51, 7);
-    border: 2px solid rgb(255, 238, 158);
+    border: 3px solid rgb(255, 238, 158);
     color: white;
 }
