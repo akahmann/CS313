@@ -71,11 +71,11 @@ foreach ($reviews as $review) {
   <input type="hidden" name="picLink" value="<?php echo $picLink; ?>">
   <input type="hidden" name="genre" value="<?php echo $genre; ?>">
   <input type="hidden" name="developer" value="<?php echo $developer; ?>">
-  <span>Put Review Here: </span> <br>
-  <textarea name="text" rows="6" cols="80"></textarea>
+  <!-- <span>Put Review Here: </span> <br> -->
+  <textarea name="text" rows="6" cols="80" placeholder="Your review.."></textarea>
   <br>
-  <span>Give Score Here: </span> <br>
-  <input type="text" name="score">
+  <!-- <span>Give Score Here: </span> <br> -->
+  <input type="text" name="score" placeholder="Give a score 0-100..">
   <br>
   <input type="submit" value="Create Review" class="btn">
 </form>

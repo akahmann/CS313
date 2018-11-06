@@ -38,7 +38,7 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <div class="midbody">
   <form action="loginPotato.php" method="POST">
-      Username: <input type="text" name="username"><br>
+      Username: <input type="text" name="username" placeholder="Your username.."><br>
       Password: <input type="password" name="password"><br>
       <input type="submit" name="submit" value="Login" class="btn">
   </form>
