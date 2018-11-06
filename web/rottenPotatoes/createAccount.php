@@ -33,13 +33,14 @@ foreach ($users as $user) {
 }
 
 if($inputUnique) {
+   $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
    $query = "INSERT INTO users(firstName, lastName, username, password, critic)" .
    "VALUES (:newFirstname, :newLastname, :newUsername, :newPassword, '$isChecked');";
    $stmt = $db->prepare($query);
    $stmt->bindValue(":newFirstname", $newFirstname, PDO::PARAM_STR);
    $stmt->bindValue(":newLastname", $newLastname, PDO::PARAM_STR);
    $stmt->bindValue(":newUsername", $newUsername, PDO::PARAM_STR);
-   $stmt->bindValue(":newPassword", $newPassword, PDO::PARAM_STR);
+   $stmt->bindValue(":newPassword", $hashedPassword, PDO::PARAM_STR);
    $stmt->execute();
 
    $_SESSION["validAccount"] = true;
