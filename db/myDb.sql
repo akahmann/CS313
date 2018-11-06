@@ -17,6 +17,7 @@ CREATE TABLE users
    , username VARCHAR(50) UNIQUE NOT NULL
    , password VARCHAR(255) NOT NULL
    , critic BOOLEAN NOT NULL
+   , picLink VARCHAR(200) UNIQUE NOT NULL
 );
 
 CREATE TABLE organizations
@@ -76,19 +77,30 @@ CREATE TABLE reviews
    , gameId INT NOT NULL REFERENCES games(id)
 );
 
-INSERT INTO users (firstName, lastName, username, password, critic)
-   VALUES ('Adam', 'Kahmann', 'Hulk', 'hungryapples', 'true')
-   , ('Justin', 'Bengtson', 'Spiderman', 'jb184351', 'false')
-   , ('Austin', 'Nelson', 'Dr Strange', 'dalinar', 'true')
-   , ('Rachel', 'Chang', 'Black Widow', 'rchang', 'false')
-   , ('Shawn', 'Ashton', 'Groot', 'sAshton', 'false')
-   , ('Conrad', 'Rife', 'Captian America', 'cRife', 'true')
-   , ('Christian', 'Jensen', 'Iron Man', 'cJensen', 'false')
-   , ('Kiefer', 'Hill', 'Drax', 'kHill', 'false')
-   , ('Scott', 'Burton', 'Nick Fury', 'sBurton', 'true');
+INSERT INTO users (firstName, lastName, username, password, critic, picLink)
+   VALUES ('Adam', 'Kahmann', 'Hulk', 'hungryapples', 'true', '/rottenPotatoes/users/hulk.jpg')
+   , ('Justin', 'Bengtson', 'Spiderman', 'jb184351', 'false', '/rottenPotatoes/users/spiderman.jpg')
+   , ('Austin', 'Nelson', 'Dr Strange', 'dalinar', 'true', '/rottenPotatoes/users/hulk.jpg')
+   , ('Rachel', 'Chang', 'Black Widow', 'rchang', 'false', '/rottenPotatoes/users/blackwidow.jpg')
+   , ('Shawn', 'Ashton', 'Groot', 'sAshton', 'false', '/rottenPotatoes/users/groot.jpg')
+   , ('Conrad', 'Rife', 'Captian America', 'cRife', 'true', '/rottenPotatoes/users/capamerica.jpg')
+   , ('Christian', 'Jensen', 'Iron Man', 'cJensen', 'false', '/rottenPotatoes/users/ironman.jpg')
+   , ('Kiefer', 'Hill', 'Drax', 'kHill', 'false', '/rottenPotatoes/users/drax.jpg')
+   , ('Scott', 'Burton', 'Nick Fury', 'sBurton', 'true', '/rottenPotatoes/users/nickfury.jpg');
 
-INSERT INTO organizations (name, password)
-   VALUES ('IGN', 'toomuchwater')
+   INSERT INTO users (firstName, lastName, username, password, critic, picLink)
+   VALUES ('Adam', 'Kahmann', 'Hulk', '$2y$10$RR5jWkDmnN7mkpIqY.3eVuc4QenrfIZijbFCJZn6eez.y0xqF', 'true', '/rottenPotatoes/users/hulk.jpg')
+   , ('Justin', 'Bengtson', 'Spiderman', '$2y$10$O4nwIbVNjmE4lshkvLo.WuYnsYPLKzDVNXu.IclISagkAo2qi', 'false', '/rottenPotatoes/users/spiderman.jpg')
+   , ('Austin', 'Nelson', 'Dr Strange', '$2y$10$DnedUFHSk4kXMgxGzt7Ofe8ymSNvY41tJBqhngG5E9oiGjQiI', 'true', '/rottenPotatoes/users/hulk.jpg')
+   , ('Rachel', 'Chang', 'Black Widow', '$2y$10$GQUMho6M4CXnIABeJzQXtea20/.T6eKOZFSU/brUYcxRmecHP', 'false', '/rottenPotatoes/users/blackwidow.jpg')
+   , ('Shawn', 'Ashton', 'Groot', '$2y$10$vH8sYpsmUJ8hUKElyTemeOC9q4JcT67.n2ybC13uurqHe6TYr', 'false', '/rottenPotatoes/users/groot.jpg')
+   , ('Conrad', 'Rife', 'Captian America', '$2y$10$rNXHfMI9HWhSYrLkLZsiJ.X3txJF6BtVcYknqkObQuQ0u48Se', 'true', '/rottenPotatoes/users/capamerica.jpg')
+   , ('Christian', 'Jensen', 'Iron Man', '$2y$10$xgDG//Kz662B3mtrDJMwcOIGO8VgpmJCO/NPciiZJl6FxcM4H', 'false', '/rottenPotatoes/users/ironman.jpg')
+   , ('Kiefer', 'Hill', 'Drax', '$2y$10$Pm9xjZHCQFnoZEAogjUxYOlk4VC/BGfIhtD4vRfeo8zoigCU4', 'false', '/rottenPotatoes/users/drax.jpg')
+   , ('Scott', 'Burton', 'Nick Fury', '$2y$10$Qf7lQj05PeF3gfmsBE72y.qrOpOwAUPGwuOc3mYCjnblDf4PA', 'true', '/rottenPotatoes/users/nickfury.jpg');
+
+INSERT INTO organizations (name, password, picLink)
+   VALUES ('IGN', 'toomuchwater', '/rottenPotatoes/games/oot.jpg')
    , ('Metacritic', 'over9000')
    , ('Gamespot', 'poweroverwhelming');
 
@@ -217,8 +229,29 @@ INSERT INTO reviews (text, date, score, likes, userId, organizationId, gameId)
       , TO_DATE('17/07/2015', 'DD/MM/YYYY'), 95, 42, 5, NULL, 6);
 --FOREIGN KEY = REFERENCES users(id)
 
---A nostalgia trip that was revolutionary for its time, Ocarina of Time has not aged well. The 3DS port, with its slightly improved models, looks somewhat better than the other releases (a smaller screen size helps the illusion of increased graphical quality) but the audio remains true to the original source, and a lot of it just doesn't sound as fantastic these days. Nevertheless, Ocarina of Time remains one of those games everyone who considers themselves a gamer should try. It was once a masterwork of innovation that still provides interesting insights into the game design considerations of its heyday.
+-- A nostalgia trip that was revolutionary for its time, Ocarina of Time has not aged well. The 3DS port, with its slightly improved models,
+-- looks somewhat better than the other releases (a smaller screen size helps the illusion of increased graphical quality) but the audio remains
+-- true to the original source, and a lot of it just doesn't sound as fantastic these days. Nevertheless, Ocarina of Time remains one of those
+-- games everyone who considers themselves a gamer should try. It was once a masterwork of innovation that still provides interesting insights
+-- into the game design considerations of its heyday.
 
 --Score Given: 70
 
-SELECT text, score, u.username AS username, g.name, u.id FROM reviews JOIN games g ON gameId = g.id JOIN users u ON userId = u.id WHERE g.name= 'Undertale';
+SELECT text, score, u.username AS username, g.name, u.id
+FROM reviews
+JOIN games g ON gameId = g.id
+JOIN users u ON userId = u.id
+
+WHERE g.name= 'Undertale';
+
+SELECT r.text AS text, r.score AS score,
+u.username AS username, o.name AS organizationName,
+rs.firstName AS rFirstName, rs.lastName AS rLastName,
+g.name, u.id
+FROM reviews r
+JOIN games g ON gameId = g.id
+FULL OUTER JOIN users u ON userId = u.id
+FULL OUTER JOIN organizations o ON r.organizationId = o.id
+FULL OUTER JOIN reviewerOrganizations ro ON o.id = ro.organizationId
+FULL OUTER JOIN reviewers rs ON ro.reviewerId = rs.id
+WHERE g.name= 'The Legend of Zelda: Ocarina of Time';

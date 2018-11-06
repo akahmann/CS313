@@ -8,7 +8,11 @@ $validLogin = $_SESSION['validLogin'];
 require('connectRPDB.php');
 $db = get_db();
 
-$query = 'SELECT id, name, piclink FROM games';
+//$query = 'SELECT id, name, piclink FROM games';
+$query = 'SELECT gm.name AS gmname, gr.name AS grname, d.name AS dname, ' .
+         ' gm.id AS id, gm.piclink AS piclink FROM genres gr ' .
+         'JOIN games gm ON gr.id = gm.genreid ' .
+         'JOIN developers d ON gm.developerid = d.id;';
 
 $stmt = $db->prepare($query);
 $stmt->execute();
@@ -29,11 +33,8 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <h1>Rotten Potatoes</h1>
 
-
 <?php
-
   if (!isset($_SESSION['username'])) {
-
 ?>
 
 <div class="midbody">
@@ -52,7 +53,6 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo "<a href='https://cryptic-taiga-82259.herokuapp.com/rottenPotatoes/logout.php'>";
     echo "Logout</a></div>";
   }
-
   if (isset($_SESSION['validLogin'])) {
     if ($_SESSION['validLogin'] == false) {
       echo "<div class='midbody'>Error Logging In</div>";
@@ -62,9 +62,8 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <div class="midbody">
    <?php
-
       foreach ($games as $game) {
-         $name = $game['name'];
+         $name = $game['gmname'];
          $picLink = $game['piclink'];
          $qry2 = "SELECT score, g.name FROM reviews JOIN games g ON gameId = g.id WHERE g.name = '$name'";
          $average = 0;
@@ -82,7 +81,6 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
          echo "<br>Average Score: $average";
          echo "<br><br><br>";
       }
-
    ?>
 </div>
 
